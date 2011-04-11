@@ -1,0 +1,11 @@
+This repo represents my config files from various operating systems (represented
+by branches).  Included (at least when I wrote this readme) are my config
+files for zsh and vim, as well as all my plugins and colorschemes from vim.
+
+Feel free to use any of the content to add to your own .vimrc or .zshrc.  Note,
+however, that my .zshrc is designed to be used with oh-my-zsh, and the
+defined colorscheme is not included in the default oh-my-zsh install.  I need
+to put some finishing touches on it and then send a pull request to have it
+included in oh-my-zsh.  Or maybe I'll just add it to this repo.
+
+In any case, feel free to ask questions or comment on anything here!  =)
