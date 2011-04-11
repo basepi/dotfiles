@@ -24,7 +24,7 @@
     " Turn off column highlighting for all filetypes on BufEnter and BufLeave
     au BufEnter,BufLeave * set colorcolumn=
     " Turn on column highlighting for specified filetypes
-    au BufEnter *.c,*.h,*.cpp,*.cs,*.java,*.tex,*.m,*.C,*.H,*.M set colorcolumn=81
+    au BufEnter *.c,*.h,*.cpp,*.cs,*.java,*.tex,*.m,*.C,*.H,*.M,README set colorcolumn=81
 
 " Searching
     set hlsearch
