@@ -26,6 +26,9 @@
     " Turn on column highlighting for specified filetypes
     au BufEnter *.c,*.h,*.cpp,*.cs,*.java,*.tex,*.m,*.C,*.H,*.M,README set colorcolumn=81
 
+    " Allow cursor to go out of the defined text boundaries
+    set virtualedit=all
+
 " Searching
     set nohls
     set incsearch
@@ -40,8 +43,8 @@
     set laststatus=2
 
 " make and python use real tabs
-    au FileType make                                     set noexpandtab
-    au FileType python                                   set noexpandtab
+    au FileType make    set noexpandtab
+    au FileType python  set noexpandtab
 
 " Allow backspacing over everything in insert mode
     set backspace=indent,eol,start
