@@ -66,8 +66,7 @@
     set vb t_vb=
 
 " Colorscheme
-    colorscheme peaksea
-    set background=dark
+    colorscheme inkpot
 
 " Keybindings
     nmap <space> zz
