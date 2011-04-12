@@ -27,7 +27,7 @@
     au BufEnter *.c,*.h,*.cpp,*.cs,*.java,*.tex,*.m,*.C,*.H,*.M,README set colorcolumn=81
 
 " Searching
-    set hlsearch
+    set nohls
     set incsearch
     set ignorecase
     set smartcase
