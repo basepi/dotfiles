@@ -1,4 +1,17 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Author: Colton Myers (crakdmirror)
+"       http://github.com/crakdmirror
+"       colton.myers@gmail.com
+"
+" Credits:
+"       Many cool features I've implemented here were inspired by amix's vimrc,
+"           blogged about at the following link:
+"       http://amix.dk/blog/post/19486#The-ultimate-vim-configuration-vimrc
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
