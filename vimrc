@@ -234,35 +234,6 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Command mode related (to explore later)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Smart mappings on the command line
-    cno $h e ~/
-    cno $d e ~/Desktop/
-    cno $j e ./
-    cno $c e <C-\>eCurrentFileDir("e")<cr>
-
-" $q is super useful when browsing on the command line
-    cno $q <C-\>eDeleteTillSlash()<cr>
-
-" Bash like keys for the command line
-    cnoremap <C-A>      <Home>
-    cnoremap <C-E>      <End>
-    cnoremap <C-K>      <C-U>
-
-    cnoremap <C-P> <Up>
-    cnoremap <C-N> <Down>
-
-" Useful on some European keyboards
-    map Â½ $
-    imap Â½ $
-    vmap Â½ $
-    cmap Â½ $
-
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <leader><cr> to no highlight (clear highlight after search)
@@ -476,41 +447,6 @@ func! DeleteTrailingWS()
     %s/\s\+$//ge
     exe "normal `z"
 endfunc
-
-" Return system type
-func! MySys()
-    return "mac"
-endfunc
-
-" Get "e <cwd>"
-func! Cwd()
-    let cwd = getcwd()
-    return "e " . cwd
-endfunc
-
-
-func! DeleteTillSlash()
-    let g:cmd = getcmdline()
-    if MySys() == "linux" || MySys() == "mac"
-        let g:cmd_edited = substitute(g:cmd, "\\(.*\[/\]\\).*", "\\1", "")
-    else
-        let g:cmd_edited = substitute(g:cmd, "\\(.*\[\\\\]\\).*", "\\1", "")
-    endif
-    if g:cmd == g:cmd_edited
-        if MySys() == "linux" || MySys() == "mac"
-            let g:cmd_edited = substitute(g:cmd, "\\(.*\[/\]\\).*/", "\\1", "")
-        else
-            let g:cmd_edited = substitute(g:cmd, "\\(.*\[\\\\\]\\).*\[\\\\\]", "\\1", "")
-        endif
-    endif
-    return g:cmd_edited
-endfunc
-
-" Return current file's directory prefaced with parameter <cmd> (I think)
-func! CurrentFileDir(cmd)
-    return a:cmd . " " . expand("%:p:h") . "/"
-endfunc
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Possible alternate configuration stuff
