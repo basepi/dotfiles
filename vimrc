@@ -50,7 +50,7 @@
     " Always show the statusline
     set laststatus=2
     " Format the statusline
-    set statusline=\ %{HasPaste()}\ [%F%m%r%h]\ %w\ [CWD:\ %{CurDir()}]\ [Line:\ %l/%L:%c]\ [FF=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]
+    set statusline=\ %{HasPaste()}\ [%F%m%r%h]\ %w\ [CWD:\ %{CurDir()}]\ [Line:\ %l/%L:%c]
 
 " Turn on wildmenu
     set wildmenu
