@@ -57,7 +57,7 @@
 " Setup tab completion modes
     set wildmode=list:longest,full
 " Ignore when tab-completing
-    set wildignore+=*.o,*.obj,.git,*.rbc
+    set wildignore+=*.o,*.obj,.git,*.rbc,*~
 
 " Turn on line numbers
     set number
@@ -118,6 +118,21 @@
 
 " Set tab label
     set guitablabel=%t
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Window Sizing and Split Configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Don't always keep windows at equal size
+    set noequalalways
+
+" When windows are split, new window appears on bottom
+    set splitbelow
+" When windows are vsplit, new window appears on right
+    set splitright
+
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -298,11 +313,14 @@
 " Remove the Windows ^M - when the encodings gets messed up
     noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-"Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
     nmap <M-j> mz:m+<cr>`z
     nmap <M-k> mz:m-2<cr>`z
     vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
     vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+" Easy exit from insert mode using jj
+    "inoremap jj <Esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
