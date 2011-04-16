@@ -123,16 +123,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Window Sizing and Split Configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Don't always keep windows at equal size
-    set noequalalways
+" Always keep windows at equal size except for winwidth/winheight of current
+" window
+    set equalalways
 
 " When windows are split, new window appears on bottom
     set splitbelow
 " When windows are vsplit, new window appears on right
     set splitright
 
-
-
+" Set minimum winwidth
+    set winwidth=81
+" Set minimum winheight
+    set winheight=40
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
