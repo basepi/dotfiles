@@ -183,6 +183,9 @@
 " Don't soft-wrap lines
     set nowrap
 
+" Set textwidth for autoformatting (gq) to 80
+    set textwidth=80
+
 " Set tabstop size
     set tabstop=4
     set shiftwidth=4
