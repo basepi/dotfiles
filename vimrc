@@ -158,9 +158,6 @@
     set undodir=~/.vim/undodir
     set undofile
 
-" Set location for MRU plugin file
-    let MRU_file='~/.vim/misc/vim_mru_files'
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, Tab, Indent, and Whitespace
@@ -330,6 +327,9 @@
     let MRU_Max_Entries = 400
     map <leader>f :MRU<CR>
 
+
+" Set location for MRU plugin file
+    let MRU_file='~/.vim/misc/vim_mru_files'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
