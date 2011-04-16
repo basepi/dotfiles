@@ -355,6 +355,14 @@
 " Set location for MRU plugin file
     let MRU_file='~/.vim/misc/vim_mru_files'
 
+
+""""""""""""""""""""""""""""""
+" => yankring plugin
+""""""""""""""""""""""""""""""
+" Map F11 to open a buffer showing the yankring
+    nnoremap <silent> <F11> :YRShow<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
