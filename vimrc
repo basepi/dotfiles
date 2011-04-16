@@ -12,6 +12,19 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Commands that need to be defined FIRST
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <leader> keys must be defined before any commands which use them
+" Map <leader> key
+    let mapleader = ","
+    let g:mapleader = ","
+
+" Map <localleader> key
+    let maplocalleader = ","
+    let g:maplocalleader = ","
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
@@ -97,7 +110,7 @@
     set magic
 
 " Allow cursor to go out of the defined text boundaries
-    set virtualedit=all
+    "set virtualedit=all
 
 " Show matching code pieces (brackets, etc)
     set showmatch
@@ -306,9 +319,6 @@
     map <F1> <Esc>
     imap <F1> <Esc>
 
-" Map <leader> key
-    let mapleader = ","
-    let g:mapleader = ","
 
 " Map <leader>pp to toggle paste mode
     map <leader>pp :setlocal paste!<cr>
