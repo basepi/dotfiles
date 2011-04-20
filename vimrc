@@ -376,6 +376,9 @@ endif
 "   to get reliant on this.)
     inoremap jj <Esc>
 
+" Easily toggle between tabs and spaces
+    nmap <F3> :set expandtab!<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Abbreviations
