@@ -1,5 +1,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Author: Colton Myers (crakdmirror)
+" Source:
+"       http://github.com/crakdmirror/configs
+"
+" Author:
+"       Colton Myers (crakdmirror)
 "       http://github.com/crakdmirror
 "       colton.myers@gmail.com
 "
@@ -9,6 +13,22 @@
 "       http://amix.dk/blog/post/19486#The-ultimate-vim-configuration-vimrc
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Installation Instructions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO:  Add these instructions
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Define installation-specific functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MySys function defines your system type.  Uncomment correct line
+function! MySys()
+    return 'mac' " Mac is default, since it's what I use most
+    " return 'windows'
+    " return 'linux'
+endfunction
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -38,7 +58,11 @@
     set autoread
 
 " When vimrc is edited, reload it
-    autocmd! bufwritepost vimrc source ~/.vimrc
+if MySys() == "windows"
+    autocmd! bufwritepost vimrc,.vimrc,_vimrc source C:\\vim\\_vimrc
+else
+    autocmd! bufwritepost vimrc,.vimrc,_vimrc source ~/.vimrc
+endif
 
 " Default file types
     set ffs=unix,mac,dos
@@ -161,7 +185,9 @@
     set gfn=Bitstream\ Vera\ Sans\ Mono:h10
 
 " Set shell
+if MySys() != "windows"
     set shell=/bin/zsh
+endif
 
 " Set terminal color-count
     set t_Co=256
@@ -182,12 +208,22 @@
     set swapfile
 
 " Directories for swp files and backup (~) files
+if MySys() == "windows"
+    set backupdir=C:\\vim\\vimfiles\\backup
+    set directory=C:\\vim\\vimfiles\\backup
+else
     set backupdir=~/.vim/backup
     set directory=~/.vim/backup
+endif
 
 " Set undo directory and enable undo file
+if MySys() == "windows"
+    set undodir=C:\\vim\\vimfiles\\undodir
+    set undofile
+else
     set undodir=~/.vim/undodir
     set undofile
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -228,9 +264,6 @@
     au FileType make    set noexpandtab
     au FileType python  set noexpandtab
 
-"Delete trailing white space, useful for Python ;)
-    autocmd BufWrite *.py :call DeleteTrailingWS()
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -238,11 +271,10 @@
 " Enable syntax highlighting
     syntax on
 
-" Set font (possibly implement system-specific later using a function?)
+" Set font (possibly implement system-specific later?  For now, install
+"   Bitstream Vera Sans Mono on all systems.  Can be found here:
+"   http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/
     set gfn=Bitstream\ Vera\ Sans\ Mono:h10
-
-" Set shell
-    set shell=/bin/zsh
 
 " Set terminal color-count
     set t_Co=256
@@ -263,7 +295,10 @@
 
 " When you press gv you vimgrep after the selected text
     vnoremap <silent> gv :call VisualSearch('gv')<CR>
-    " What does this mapping do?
+    " Search for some text recursively in the current working directory
+    "   Assuming it works (and I've pulled in all the necessary bindings),
+    "   should use <leader>cc to display all matches and <leader>n and
+    "   <leader>p to traverse them.
     map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
 
@@ -286,7 +321,7 @@
 " Close all the buffers
     map <leader>ba :1,300 bd!<cr>
 
-" Use the arrows to something usefull
+" Use the arrows to something useful
     map <right> :bn<cr>
     map <left> :bp<cr>
 
@@ -310,7 +345,7 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Other keybindings
+" => Other key bindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map visual-mode spacebar to center screen on cursor
     nmap <space> zz
@@ -319,24 +354,27 @@
     map <F1> <Esc>
     imap <F1> <Esc>
 
-
 " Map <leader>pp to toggle paste mode
     map <leader>pp :setlocal paste!<cr>
 
-" Map <leader>bb to change to parent directory (I think)
+" Map <leader>bb to change to parent directory
     map <leader>bb :cd ..<cr>
 
 " Remove the Windows ^M - when the encodings gets messed up
     noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+" Move a line of text using ALT+[jk] or Command+[jk] on mac
+if MySys() == "mac"
     nmap <M-j> mz:m+<cr>`z
     nmap <M-k> mz:m-2<cr>`z
     vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
     vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+endif
 
-" Easy exit from insert mode using jj
-    "inoremap jj <Esc>
+" Easy exit from insert mode using jj (often not available in
+"   vim emulation plugins in IDEs, etc, so you might not want
+"   to get reliant on this.)
+    inoremap jj <Esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -362,8 +400,12 @@
     map <leader>f :MRU<CR>
 
 
-" Set location for MRU plugin file
+" Set location for MRU plugin's file
+if MySys() == "windows"
+    let MRU_file='C:\\vim\\vimfiles\\misc\\vim_mru_files'
+else
     let MRU_file='~/.vim/misc/vim_mru_files'
+endif
 
 
 """"""""""""""""""""""""""""""
@@ -376,7 +418,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Pressing <leader>ss will toggle and untoggle spell checking
+"Pressing <leader>ss will toggle spell checking
     map <leader>ss :setlocal spell!<cr>
 
 "Shortcuts using <leader>
@@ -389,8 +431,14 @@
 """"""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""
-let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated .git'
-set grepprg=/bin/grep\ -nH
+" Define directories for vimgrep to skip
+    let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated .git'
+
+" Define grep program (I don't know a built-in one for Windows,
+"   so Windows will not define this.)
+if MySys() != "windows"
+    set grepprg=/bin/grep\ -nH
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -445,9 +493,19 @@ function! <SID>BufcloseCloseIt()
     endif
 endfunction
 
-" Get current working directory, abbreviating if in home directory
+" Get current working directory, abbreviating if in home directory (edit
+"   home directory as necessary for your username, etc)
 function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/crakdmirror/', "~/", "g")
+    if MySys() == "mac"
+        let curdir = substitute(getcwd(), '/Users/crakdmirror/', "~/", "g")
+    elseif MySys() == "windows"
+        let curdir = substitute(getcwd(), 'C:\\Users\\crakdmirror\\', "~\\", "g")
+    elseif MySys() == "linux"
+        let curdir = substitute(getcwd(), '/home/crakdmirror/', "~/", "g")
+    else
+        let curdir = getcwd()
+    endif
+
     return curdir
 endfunction
 
@@ -460,7 +518,11 @@ function! HasPaste()
     endif
 endfunction
 
-" Delete trailing whitespace (how good is this?)
+" Delete trailing whitespace (don't actually use, because I don't
+"   know how good it is, and with this vimrc, trailing whitespace
+"   is already highlighted, so I always delete it manually.  Might
+"   be useful for using someone else's codebase, or when coming from
+"   another editor.  Bind it to a key if you want!)
 func! DeleteTrailingWS()
     exe "normal mz"
     %s/\s\+$//ge
