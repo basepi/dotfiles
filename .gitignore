@@ -2,3 +2,4 @@
 undodir/
 *.swp
 vim_mru_files
+.netrwhist
