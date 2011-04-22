@@ -24,11 +24,11 @@
 " => Define installation-specific functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MySys function defines your system type.  Uncomment correct line
-function! MySys()
-    return 'mac' " Mac is default, since it's what I use most
-    " return 'windows'
-    " return 'linux'
-endfunction
+    function! MySys()
+        return 'mac' " Mac is default, since it's what I use most
+        " return 'windows'
+        " return 'linux'
+    endfunction
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,11 +58,11 @@ endfunction
     set autoread
 
 " When vimrc is edited, reload it
-if MySys() == "windows"
-    autocmd! bufwritepost vimrc,.vimrc,_vimrc source C:\\vim\\_vimrc
-else
-    autocmd! bufwritepost vimrc,.vimrc,_vimrc source ~/.vimrc
-endif
+    if MySys() == "windows"
+        autocmd! bufwritepost vimrc,.vimrc,_vimrc source C:\\vim\\_vimrc
+    else
+        autocmd! bufwritepost vimrc,.vimrc,_vimrc source ~/.vimrc
+    endif
 
 " Default file types
     set ffs=unix,mac,dos
@@ -185,9 +185,9 @@ endif
     set gfn=Bitstream\ Vera\ Sans\ Mono:h10
 
 " Set shell
-if MySys() != "windows"
-    set shell=/bin/zsh
-endif
+    if MySys() != "windows"
+        set shell=/bin/zsh
+    endif
 
 " Set terminal color-count
     set t_Co=256
@@ -208,22 +208,22 @@ endif
     set swapfile
 
 " Directories for swp files and backup (~) files
-if MySys() == "windows"
-    set backupdir=C:\\vim\\vimfiles\\backup
-    set directory=C:\\vim\\vimfiles\\backup
-else
-    set backupdir=~/.vim/backup
-    set directory=~/.vim/backup
-endif
+    if MySys() == "windows"
+        set backupdir=C:\\vim\\vimfiles\\backup
+        set directory=C:\\vim\\vimfiles\\backup
+    else
+        set backupdir=~/.vim/backup
+        set directory=~/.vim/backup
+    endif
 
 " Set undo directory and enable undo file
-if MySys() == "windows"
-    set undodir=C:\\vim\\vimfiles\\undodir
-    set undofile
-else
-    set undodir=~/.vim/undodir
-    set undofile
-endif
+    if MySys() == "windows"
+        set undodir=C:\\vim\\vimfiles\\undodir
+        set undofile
+    else
+        set undodir=~/.vim/undodir
+        set undofile
+    endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -364,17 +364,17 @@ endif
     noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
-if MySys() == "mac"
-    nmap <M-j> mz:m+<cr>`z
-    nmap <M-k> mz:m-2<cr>`z
-    vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-    vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-endif
+    if MySys() == "mac"
+        nmap <M-j> mz:m+<cr>`z
+        nmap <M-k> mz:m-2<cr>`z
+        vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+        vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+    endif
 
 " Easy exit from insert mode using jj (often not available in
 "   vim emulation plugins in IDEs, etc, so you might not want
 "   to get reliant on this.)
-    inoremap jj <Esc>
+    "inoremap jj <Esc>
 
 " Easily toggle between tabs and spaces
     nmap <F3> :set expandtab!<CR>
@@ -404,11 +404,11 @@ endif
 
 
 " Set location for MRU plugin's file
-if MySys() == "windows"
-    let MRU_file='C:\\vim\\vimfiles\\misc\\vim_mru_files'
-else
-    let MRU_file='~/.vim/misc/vim_mru_files'
-endif
+    if MySys() == "windows"
+        let MRU_file='C:\\vim\\vimfiles\\misc\\vim_mru_files'
+    else
+        let MRU_file='~/.vim/misc/vim_mru_files'
+    endif
 
 
 """"""""""""""""""""""""""""""
@@ -439,9 +439,9 @@ endif
 
 " Define grep program (I don't know a built-in one for Windows,
 "   so Windows will not define this.)
-if MySys() != "windows"
-    set grepprg=/bin/grep\ -nH
-endif
+    if MySys() != "windows"
+        set grepprg=/bin/grep\ -nH
+    endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
