@@ -17,7 +17,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Installation Instructions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO:  Add these instructions
+" Please see README.md for installation instructions
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
