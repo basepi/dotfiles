@@ -255,6 +255,9 @@
     au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
     au InsertLeave * match ExtraWhitespace /\s\+$/
 
+    autocmd ColorScheme * highlight TabWhitespace ctermbg=darkgray guibg=darkgray
+    au BufEnter * match TabWhitespace /\t/
+
 " Turn off column highlighting for all filetypes on BufEnter and BufLeave
     au BufEnter,BufLeave * set colorcolumn=
 " Turn on column 81 highlighting for specified filetypes on BufEnter
