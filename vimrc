@@ -418,6 +418,11 @@
 """"""""""""""""""""""""""""""
 " Map F11 to open a buffer showing the yankring
     nnoremap <silent> <F11> :YRShow<CR>
+    if MySys() == "windows"
+        let g:yankring_history_dir = 'C:\\vim\\vimfiles\\misc\\'
+    else
+        let g:yankring_history_dir = '~/.vim/misc/'
+    endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
