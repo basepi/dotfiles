@@ -196,7 +196,7 @@
     set background=dark
 
 " Colorscheme
-    colorscheme inkpot
+    colorscheme inkpot-v2
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
