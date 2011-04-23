@@ -6,7 +6,6 @@ set tags=./tags,tags
 " Map the command <Leader>tj to the generation of the tags file.
 " Use ":stj tag_name" to split your window and jump to a particular
 " class, method, variable, etc.
-map <unique> <Leader>t <ESC>:call SetTags()<CR>
 map <unique> <Leader>tj <ESC>:call SetTags()<CR>
 
 " Sets the tags variable based upon which tags files
