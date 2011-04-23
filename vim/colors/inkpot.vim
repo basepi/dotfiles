@@ -89,7 +89,7 @@ if has("gui_running")
     hi FoldColumn     gui=NONE   guifg=#8b8bcd   guibg=#2e2e2e
 
     hi Directory      gui=NONE   guifg=#00ff8b   guibg=NONE
-    hi LineNr         gui=NONE   guifg=#8b8bcd   guibg=#2e2e2e
+    hi LineNr         gui=NONE   guifg=#8b8bcd   guibg=#1e1e1e
     hi NonText        gui=BOLD   guifg=#8b8bcd   guibg=NONE
     hi SpecialKey     gui=BOLD   guifg=#ab60ed   guibg=NONE
     hi Title          gui=BOLD   guifg=#af4f4b   guibg=NONE
