@@ -87,7 +87,7 @@
     " Always show the statusline
     set laststatus=2
     " Format the statusline
-    set statusline=\ %{HasPaste()}\ [%F%m%r%h]\ %w\ [CWD:\ %{CurDir()}]\ [Line:\ %l/%L:%c]
+    set statusline=\ %{HasTabs()}%{HasPaste()}\ [%F%m%r%h]\ %w\ [CWD:\ %{CurDir()}]\ [Line:\ %l/%L:%c]
 
 " Turn on wildmenu
     set wildmenu
@@ -530,6 +530,15 @@ function! HasPaste()
         return '[PASTE MODE]'
     else
         return ''
+    endif
+endfunction
+
+" Check for tabs (noexpandtab mode)
+function! HasTabs()
+    if &expandtabs
+        return ''
+    else
+        return '[TABS] '
     endif
 endfunction
 
