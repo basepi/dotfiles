@@ -535,7 +535,7 @@ endfunction
 
 " Check for tabs (noexpandtab mode)
 function! HasTabs()
-    if &expandtabs
+    if &expandtab
         return ''
     else
         return '[TABS] '
