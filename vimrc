@@ -81,7 +81,9 @@
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 line scroll-offset
-    set so=7
+    set scrolloff=7
+" Set 10 character side scroll-offset
+    set sidescrolloff=10
 
 " Status line
     " Always show the statusline
