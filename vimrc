@@ -143,7 +143,7 @@
 
 " No sound or visual cues on errors
     set noerrorbells
-    set novisualbell
+    set visualbell
     set t_vb=
     set tm=500 " What does this do?
 
