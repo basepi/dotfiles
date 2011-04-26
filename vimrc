@@ -84,8 +84,6 @@
     set scrolloff=7
 " Set 10 character side scroll-offset
     set sidescrolloff=10
-" Enable side scrolling (as opposed to default jumping behavior)
-    set sidescroll
 
 " Status line
     " Always show the statusline
