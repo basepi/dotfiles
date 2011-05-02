@@ -265,7 +265,7 @@
 " Turn off column highlighting for all filetypes on BufEnter and BufLeave
     au BufEnter,BufLeave * set colorcolumn=
 " Turn on column 81 highlighting for specified filetypes on BufEnter
-    au BufEnter *.wp,*.c,*.h,*.cpp,*.cs,*.java,*.tex,*.m,*.C,*.H,*.M,README set colorcolumn=81
+    au BufEnter *.md,*.wp,*.c,*.h,*.cpp,*.cs,*.java,*.tex,*.m,*.C,*.H,*.M,README set colorcolumn=81
 " Turn on column 73 highlighting for git commit messages
     au BufEnter COMMIT_EDITMSG set colorcolumn=73
 
