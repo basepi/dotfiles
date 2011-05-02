@@ -1,10 +1,10 @@
 Overview
 --------
 
-This repository represents my config files from various operating systems
-(represented by branches).  Included (at least when I wrote this readme) are my
-config files for zsh and vim, as well as all my plugins, colorschemes, and other
-files from vim.
+This repository represents my vim config files/plugins from various operating
+systems (represented by branches).  Included (at least when I wrote this readme)
+is my configuration file for vim (vimrc), as well as all my plugins,
+colorschemes, and other vim files
 
 Use
 ---
@@ -18,12 +18,11 @@ information.
 License
 -------
 
-Feel free to use any of the content to add to your own .vimrc or .zshrc, or even
-to just fork my repository and make your own.  Note, however, that my .zshrc is
-designed to be used with oh-my-zsh, and the defined theme is not included in the
-default oh-my-zsh install.  I need to put some finishing touches on it and then
-send a pull request to have it included in oh-my-zsh.  Or maybe I'll just add it
-to this repo.
+Feel free to use any of the content to add to your own vim configuration, or even
+to just fork my repository and make your own it your own.  My only request is
+that you send me a link with your new fork, so I can check out what you do
+differently.  I love tinkering with vim, and am very interested in how other
+people configure their vim.
 
 Comments/Questions/Criticism
 ----------------------------
