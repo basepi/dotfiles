@@ -274,7 +274,6 @@
 
 " Define FileTypes which use normal tab characters instead of spaces
     au FileType make    set noexpandtab
-    au FileType python  set noexpandtab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
