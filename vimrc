@@ -390,10 +390,6 @@
 " Easily toggle between tabs and spaces
     nmap <F3> :set expandtab!<CR>
 
-" Make k/j go up/down visible lines, not actual lines
-    nmap <silent> j gj
-    nmap <silent> k gk
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Abbreviations
