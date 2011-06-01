@@ -172,7 +172,7 @@
     set splitright
 
 " Set minimum winwidth
-    set winwidth=81
+    set winwidth=80
 " Set minimum winheight
     set winheight=40
 
@@ -238,9 +238,6 @@
 " Don't soft-wrap lines
     set nowrap
 
-" Set textwidth for autoformatting (gq) to 80
-    set textwidth=80
-
 " Set tabstop size
     set tabstop=4
     set shiftwidth=4
@@ -265,12 +262,13 @@
     highlight TabWhitespace ctermbg=darkgray guibg=#101010
     match TabWhitespace /\t/
 
-" Turn off column highlighting for all filetypes on BufEnter and BufLeave
-    au BufEnter,BufLeave * set colorcolumn=
-" Turn on column 81 highlighting for specified filetypes on BufEnter
-    au BufEnter *.py,*.md,*.wp,*.c,*.h,*.cpp,*.cs,*.java,*.tex,*.m,*.C,*.H,*.M,README set colorcolumn=81
-" Turn on column 73 highlighting for git commit messages
+" Turn on column 80 highlighting and textwidth 79 for all buffers by default
+    au BufEnter * set colorcolumn=80
+    au BufEnter * set textwidth=79
+" Modify column highlighting for specified filetypes on BufEnter
     au BufEnter COMMIT_EDITMSG set colorcolumn=73
+" Handle textwidth for various filetypes (used for autoformatting, gq)
+    au BufEnter COMMIT_EDITMSG set textwidth=72
 
 " Define FileTypes which use normal tab characters instead of spaces
     au FileType make    set noexpandtab
