@@ -425,7 +425,7 @@
 " => yankring plugin
 """"""""""""""""""""""""""""""
 " Map F11 to open a buffer showing the yankring
-    nnoremap <silent> <F11> :YRShow<CR>
+    nnoremap <silent> <leader>yr :YRShow<CR>
     if MySys() == "windows"
         let g:yankring_history_dir = 'C:\\vim\\vimfiles\\misc\\'
     else

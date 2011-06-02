@@ -4,3 +4,4 @@ undodir/
 vim_mru_files
 .netrwhist
 yankring_history*
+*.py
