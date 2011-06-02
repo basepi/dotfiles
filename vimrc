@@ -185,6 +185,7 @@
 
 " Define custom extension(s) for syntax highlighting
     au BufNewFile,BufRead *.md set filetype=markdown
+    au BufNewFile,BufRead *.tex set filetype=tex
 
 " Set font (possibly implement system-specific later using a function?)
     set gfn=Bitstream\ Vera\ Sans\ Mono:h10
