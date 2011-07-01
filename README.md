@@ -13,7 +13,7 @@ I create symlinks for all my configuration files which point to my local clone
 of this repository.  I find this to be the best way, because after some fairly
 simple setup, it's virtually seamless, and fairly pain-free to keep it up to
 date.  Someday I may implement some sort of install script -- in the meantime,
-Google symlinks for your operating system of choice, and go at it!
+Google 'symlinks' for your operating system of choice, and go at it!
 
 License
 -------
