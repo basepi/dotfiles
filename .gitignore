@@ -27,3 +27,7 @@
 !vim/vim/undodir/
 !vim/vim/undodir/README
 
+# Git-related
+!git/
+!git/*
+
