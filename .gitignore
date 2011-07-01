@@ -6,7 +6,7 @@
 !.gitignore
 !README.md
 
-# Vim-related
+# Vim
 !vim/
 !vim/vimrc
 !vim/vim/
@@ -27,11 +27,15 @@
 !vim/vim/undodir/
 !vim/vim/undodir/README
 
-# Git-related
+# Git
 !git/
 !git/*
 
-# Mercurial-related (hg)
+# Mercurial (hg)
 !hg/
 !hg/*
+
+# Screen
+!screen/
+!screen/*
 
