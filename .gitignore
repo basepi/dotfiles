@@ -31,3 +31,7 @@
 !git/
 !git/*
 
+# Mercurial-related (hg)
+!hg/
+!hg/*
+
