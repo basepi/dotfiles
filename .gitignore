@@ -7,22 +7,23 @@
 !README.md
 
 # Vim-related
-!vimrc
 !vim/
-!vim/plugin/
-!vim/plugin/*
-!vim/backup/
-!vim/backup/README
-!vim/colors/
-!vim/colors/*
-!vim/doc/
-!vim/doc/*
-!vim/misc/
-!vim/misc/README
-!vim/plugin/
-!vim/plugin/*
-!vim/spell/
-!vim/spell/*
-!vim/undodir/
-!vim/undodir/README
+!vim/vimrc
+!vim/vim/
+!vim/vim/plugin/
+!vim/vim/plugin/*
+!vim/vim/backup/
+!vim/vim/backup/README
+!vim/vim/colors/
+!vim/vim/colors/*
+!vim/vim/doc/
+!vim/vim/doc/*
+!vim/vim/misc/
+!vim/vim/misc/README
+!vim/vim/plugin/
+!vim/vim/plugin/*
+!vim/vim/spell/
+!vim/vim/spell/*
+!vim/vim/undodir/
+!vim/vim/undodir/README
 
