@@ -1,0 +1,6 @@
+# Mac OS X specific tweaks.
+
+# I use mvim on osx, almost exclusively.  The vi keybinding in aliases allows
+# me to launch the CLI version if necessary
+alias vim="mvim"
+

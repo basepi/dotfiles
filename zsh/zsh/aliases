@@ -1,0 +1,31 @@
+# Aliases
+
+# Sudo
+alias svim='sudo vim'
+alias stail="sudo tail"
+
+# Package managers
+alias apt-get='sudo apt-get'
+alias aptitude='sudo aptitude'
+
+# Misc
+alias rapache="sudo /etc/init.d/apache2 reload"
+alias ports="sudo lsof -i -P -sTCP:LISTEN"
+
+# Super user
+alias _='sudo'
+
+# Show history
+alias history='fc -l 1'
+
+# List direcory contents
+alias ls='ls -h'
+alias la='ls -ahf'
+alias lsa='ls -lah'
+alias l='ls -la'
+alias ll='ls -l'
+alias sl='ls' # In case of screw-ups (which pretty well describes me)
+
+# Sometimes I work on vi-only systems -- this keeps me sane on the switch
+alias vi="vim"
+

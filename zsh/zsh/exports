@@ -1,0 +1,34 @@
+# Exports
+
+# General
+export TERM="xterm-256color"
+if [[ `uname -s` == *CYGWIN* ]]; then
+    export TERM="cygwin"
+fi
+export DISPLAY=:0.0
+
+export LS_OPTIONS='--color=auto'
+export CLICOLOR='Yes'
+export LSCOLORS='exfxcxdxbxegedabagacad'
+export LANG=en_US.UTF-8
+
+# Editor settings
+export EDITOR=vim
+export SVN_EDITOR=vim
+
+# Graphviz DOT stuff for Doxygen
+export DOT_PATH=/Applications/Graphviz.app/Contents/MacOS
+export HAVE_DOT=YES
+export SHORT_NAMES=YES
+
+# PATH (yes, it's messy)
+export PATH=/usr/local/bin:/usr/bin:/usr/include:/usr/local/include:/usr/local/lib:/usr/lib:/usr/texbin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/:/Users/crakdmirror/bin:/usr/local/Cellar/python/2.7.1/bin:/usr/local/Cellar/ruby/1.9.2-p136/bin:/Applications/Doxygen.app/Contents/Resources:/Applications/Doxygen.app/Contents/MacOS:/Applications/Graphviz.app/Contents/MacOS:/usr/local/share/python
+
+# GREP
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+
+# Pager (less)
+export PAGER=less
+export LC_CTYPE=en_US.UTF-8
+

@@ -39,3 +39,8 @@
 !screen/
 !screen/*
 
+# Zsh
+!zsh/
+!zsh/zshrc
+!zsh/zsh/
+!zsh/zsh/*
