@@ -16,3 +16,6 @@
     default = matching
 [core]
     excludesfile = "~/.gitexcludes"
+    editor = vim
+[merge]
+    tool = vimdiff
