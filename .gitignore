@@ -5,6 +5,7 @@
 # Repo-related
 !.gitignore
 !README.md
+!install.py
 
 # Vim
 !vim/
