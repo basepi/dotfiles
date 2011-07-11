@@ -12,8 +12,13 @@ Use
 I create symlinks for all my configuration files which point to my local clone
 of this repository.  I find this to be the best way, because after some fairly
 simple setup, it's virtually seamless, and fairly pain-free to keep it up to
-date.  Someday I may implement some sort of install script -- in the meantime,
-Google 'symlinks' for your operating system of choice, and go at it!
+date.
+
+*UPDATE*: Install script is done, use at your own risk.  Python 3 must be
+installed on your system in order to use the script.  Just type ./install.sh
+from the root directory of the repository, and it will symlink the files of
+your choosing into your home directory. Read the disclaimer in the script
+source code before using.
 
 License
 -------
