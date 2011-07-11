@@ -5,6 +5,7 @@ export ZSH=$HOME/.zsh
 # really require explicit ordering)
 typeset -a DOTFILES
 DOTFILES=(
+    colors
     exports
     options
     aliases
