@@ -14,15 +14,24 @@ function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
-PROMPT='
-%{$FX[reset]$FG[025]%}[%{$FG[133]%}%n%{$FG[025]%}@%{$FG[136]%}%m%{$FG[025]%}] [%{$FG[070]%}$(collapse_pwd)%{$FG[025]%}]$(git_prompt_info)
-$(virtualenv_info)$(prompt_char) %{$FG[007]%}'
-
-setopt prompt_subst
-RPROMPT='%{$FX[reset]$FG[025]%}[%{$FG[037]%}%*%{$FG[025]%}]%{$FG[007]%}'
+local d="%{$FX[reset]$FG[025]%}"
+local name="%{$FX[reset]$FG[133]%}%n"
+local host="%{$FX[reset]$FG[136]%}%m"
+local dir="%{$FX[reset]$FG[070]%}$(collapse_pwd)"
+local pinfo="$(virtualenv_info)$(prompt_char)"
+local white="%{$FG[007]%}"
+local tstamp="%{$FG[037]%}%*"
 
 ZSH_GIT_PROMPT_PREFIX=" [%{$FX[reset]$FG[133]%}"
 ZSH_GIT_PROMPT_SUFFIX="%{$FX[reset]$FG[025]%}]"
 ZSH_GIT_PROMPT_DIRTY="%{$FX[reset]$FG[070]%}?"
 ZSH_GIT_PROMPT_UNTRACKED="%{$FX[reset]$FG[070]%}?"
 ZSH_GIT_PROMPT_CLEAN=""
+
+PROMPT="
+${d}[${name}${d}@${host}${d}] [${dir}${d}]$(git_prompt_info)
+${d}${pinfo} ${white}"
+
+setopt prompt_subst
+RPROMPT="${d}[${tstamp}${d}]${white}"
+
