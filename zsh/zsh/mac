@@ -4,3 +4,5 @@
 # me to launch the CLI version if necessary
 alias vim="mvim"
 
+# Use gls instead of ls, assuming coreutils is installed, for 256 colors in ls
+alias ls="gls"
