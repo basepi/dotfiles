@@ -17,8 +17,7 @@ function virtualenv_info {
 local d="%{$FX[reset]$FG[025]%}"
 local name="%{$FX[reset]$FG[133]%}%n"
 local host="%{$FX[reset]$FG[136]%}%m"
-local dir="%{$FX[reset]$FG[070]%}$(collapse_pwd)"
-local pinfo="$(virtualenv_info)$(prompt_char)"
+local green="%{$FX[reset]$FG[070]%}"
 local white="%{$FG[007]%}"
 local tstamp="%{$FG[037]%}%*"
 
@@ -29,8 +28,8 @@ ZSH_GIT_PROMPT_UNTRACKED="%{$FX[reset]$FG[070]%}?"
 ZSH_GIT_PROMPT_CLEAN=""
 
 PROMPT='
-${d}[${name}${d}@${host}${d}] [${dir}${d}]$(git_prompt_info)
-${d}${pinfo} ${white}'
+${d}[${name}${d}@${host}${d}] [${green}$(collapse_pwd)${d}]$(git_prompt_info)
+${d}$(virtualenv_info)$(prompt_char) ${white}'
 
 setopt prompt_subst
 RPROMPT="${d}[${tstamp}${d}]${white}"
