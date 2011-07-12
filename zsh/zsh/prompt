@@ -15,14 +15,14 @@ function virtualenv_info {
 }
 
 PROMPT='
-%{$fg[blue]%}[%{$fg[magenta]%}%n%{$fg[blue]%}@%{$fg[yellow]%}%m%{$fg[blue]%}] [%{$fg[green]%}$(collapse_pwd)%{$fg[blue]%}]$(git_prompt_info)
-$(virtualenv_info)$(prompt_char) %{$reset_color%}'
+%{$FX[reset]$FG[025]%}[%{$FG[133]%}%n%{$FG[025]%}@%{$FG[136]%}%m%{$FG[025]%}] [%{$FG[070]%}$(collapse_pwd)%{$FG[025]%}]$(git_prompt_info)
+$(virtualenv_info)$(prompt_char) %{$FG[007]%}'
 
 setopt prompt_subst
-RPROMPT='%{$fg[blue]%}[%{$fg[cyan]%}%*%{$fg[blue]%}]%{$reset_color%}'
+RPROMPT='%{$FX[reset]$FG[025]%}[%{$FG[037]%}%*%{$FG[025]%}]%{$FG[007]%}'
 
-ZSH_GIT_PROMPT_PREFIX=" [%{$fg[magenta]%}"
-ZSH_GIT_PROMPT_SUFFIX="%{$fg[blue]%}]"
-ZSH_GIT_PROMPT_DIRTY="%{$fg[green]%}?"
-ZSH_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
+ZSH_GIT_PROMPT_PREFIX=" [%{$FX[reset]$FG[133]%}"
+ZSH_GIT_PROMPT_SUFFIX="%{$FX[reset]$FG[025]%}]"
+ZSH_GIT_PROMPT_DIRTY="%{$FX[reset]$FG[070]%}?"
+ZSH_GIT_PROMPT_UNTRACKED="%{$FX[reset]$FG[070]%}?"
 ZSH_GIT_PROMPT_CLEAN=""
