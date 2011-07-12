@@ -6,6 +6,13 @@ As long as I was putting them in a git repo, I figured I may as well post them
 online so that I can share the tricks I've found, and maybe learn a few tricks
 from you as well!  Enjoy!
 
+Requirements
+------------
+
+If you're using OSX, you must have the coreutils package install via homebrew
+in order to use this as-is, as it aliases ls to gls by default (for 256
+ls-colors using dircolors).
+
 Use
 ---
 
