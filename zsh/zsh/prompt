@@ -28,9 +28,9 @@ ZSH_GIT_PROMPT_DIRTY="%{$FX[reset]$FG[070]%}?"
 ZSH_GIT_PROMPT_UNTRACKED="%{$FX[reset]$FG[070]%}?"
 ZSH_GIT_PROMPT_CLEAN=""
 
-PROMPT="
+PROMPT='
 ${d}[${name}${d}@${host}${d}] [${dir}${d}]$(git_prompt_info)
-${d}${pinfo} ${white}"
+${d}${pinfo} ${white}'
 
 setopt prompt_subst
 RPROMPT="${d}[${tstamp}${d}]${white}"
