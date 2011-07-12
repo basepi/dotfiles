@@ -9,9 +9,9 @@ export DISPLAY=:0.0
 
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
-# Default LSCOLORS except directories are green and sockets are blue
-# I find this is much easier on the eyes with a dark background
-export LSCOLORS='cxfxexdxbxegedabagacad'
+# I use dircolors now, but this LSCOLORS is easier on the eyes than the default
+# if you're stuck without 256 colors in ls.
+#export LSCOLORS='cxfxexdxbxegedabagacad'
 export LANG=en_US.UTF-8
 
 # Editor settings
