@@ -19,12 +19,12 @@ alias _='sudo'
 alias history='fc -l 1'
 
 # List direcory contents
-alias ls='ls -h'
-alias la='ls -ahf'
-alias lsa='ls -lah'
-alias l='ls -la'
-alias ll='ls -l'
-alias sl='ls' # In case of screw-ups (which pretty well describes me)
+alias ls="ls --color=always -h"
+alias la='ls --color=always -ahf'
+alias lsa='ls --color=always -lah'
+alias l='ls --color=always -la'
+alias ll='ls --color=always -l'
+alias sl='ls --color=always -h' # In case of screw-ups (which pretty well describes me)
 
 # Sometimes I work on vi-only systems -- this keeps me sane on the switch
 alias vi="vim"

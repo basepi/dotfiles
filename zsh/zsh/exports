@@ -7,7 +7,6 @@ if [[ `uname -s` == *CYGWIN* ]]; then
 fi
 export DISPLAY=:0.0
 
-export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 # I use dircolors now, but this LSCOLORS is easier on the eyes than the default
 # if you're stuck without 256 colors in ls.

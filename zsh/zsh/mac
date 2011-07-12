@@ -5,4 +5,10 @@
 alias vim="mvim"
 
 # Use gls instead of ls, assuming coreutils is installed, for 256 colors in ls
-alias ls="gls"
+alias ls='gls --color=always -h'
+alias la='gls --color=always -ah'
+alias lsa='gls --color=always -lah'
+alias l='gls --color=always -la'
+alias ll='gls --color=always -l'
+alias sl='gls --color=always -h' # In case of screw-ups (which pretty well describes me)
+
