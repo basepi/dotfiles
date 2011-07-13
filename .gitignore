@@ -44,4 +44,7 @@
 !zsh/
 !zsh/zshrc
 !zsh/zsh/
-!zsh/zsh/*
+!zsh/zsh/includes/
+!zsh/zsh/includes/*
+!zsh/zsh/other/
+!zsh/zsh/other/*

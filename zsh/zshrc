@@ -20,6 +20,6 @@ DOTFILES=(
     prompt
 )
 for file in $DOTFILES; do
-    file=$ZSH/$file
+    file=$ZSH/includes/$file
     [[ -f $file ]] && source $file
 done
