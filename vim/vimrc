@@ -389,6 +389,9 @@
 " Easily toggle between tabs and spaces
     nmap <F3> :set expandtab!<CR>
 
+" Toggle line numbers and fold column for easy copying via <F2>:
+    nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Abbreviations
