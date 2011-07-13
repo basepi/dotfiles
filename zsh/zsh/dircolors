@@ -1,0 +1,73 @@
+# .dircolors
+
+NORMAL                 38;5;253    # Global default
+FILE                   38;5;253    # Normal file
+DIR                    38;5;30     # Directory
+LINK                   38;5;57     # Symbolic link.  (can be set to 'target')
+EXEC                   38;5;166    # Executable
+FIFO                   38;5;178    # Pipe
+SOCK                   38;5;197    # Socket
+DOOR                   38;5;197    # Door
+BLK                    38;5;113    # Block device driver
+CHR                    38;5;113    # Character device driver
+ORPHAN                 48;5;196;38;5;232 # Symlink to nonexistent file
+STICKY                 48;5;235;38;5;118
+STICKY_OTHER_WRITABLE  48;5;235;38;5;118
+SETGID                 38;5;137
+SETUID                 38;5;137
+MULTIHARDLINK          38;5;220;1
+OTHER_WRITABLE         38;5;33;1
+
+TERM Eterm
+TERM ansi
+TERM color-xterm
+TERM con132x25
+TERM con132x30
+TERM con132x43
+TERM con132x60
+TERM con80x25
+TERM con80x28
+TERM con80x30
+TERM con80x43
+TERM con80x50
+TERM con80x60
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM eterm-color
+TERM gnome
+TERM gnome-256color
+TERM jfbterm
+TERM konsole
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mach-color
+TERM mlterm
+TERM putty
+TERM rxvt
+TERM rxvt-256color
+TERM rxvt-cygwin
+TERM rxvt-cygwin-native
+TERM rxvt-unicode
+TERM rxvt-unicode-256color
+TERM rxvt-unicode256
+TERM screen
+TERM screen-256color
+TERM screen-256color-bce
+TERM screen-bce
+TERM screen-w
+TERM screen.rxvt
+TERM screen.linux
+TERM terminator
+TERM vt100
+TERM xterm
+TERM xterm-16color
+TERM xterm-256color
+TERM xterm-88color
+TERM xterm-color
+TERM xterm-debian
+
+# vim: ft=dircolors:
+
