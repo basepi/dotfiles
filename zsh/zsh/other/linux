@@ -1,3 +1,7 @@
 # Linux
 
-# Add any Linux-specific configuration here
+# Set dircolors for ls
+dircolors -b $ZSH/other/dircolors > tmp.zsh
+source tmp.zsh
+rm tmp.zsh
+

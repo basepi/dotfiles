@@ -18,3 +18,4 @@ alias sl='gls --color=always -h' # In case of screw-ups (which pretty well descr
 gdircolors -b $ZSH/other/dircolors > tmp.zsh
 source tmp.zsh
 rm tmp.zsh
+
