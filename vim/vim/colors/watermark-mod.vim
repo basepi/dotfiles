@@ -1,15 +1,8 @@
 " Vim color file
-" watermark v1.0b
+" watermark-mod v1.0
+"
+" Based on Watermark:
 " http://www.vim.org/scripts/script.php?script_id=1454
-" 
-" Maintainer:	Shawn Axsom <axs221@gmail.com>
-"
-"   * Place :colo watermark in your VimRC/GVimRC file
-"     * GvimRC if using GUI any
-"
-"   - Thanks to Desert and OceanDeep for their color scheme 
-"     file layouts
-"   - Thanks to Raimon Grau for his feedback
 
 set background=dark
 if version > 580
@@ -21,16 +14,16 @@ if version > 580
     endif
 endif
 
-let g:colors_name="watermark"
+let g:colors_name="watermark-mod"
 
 hi Normal       guifg=#8b9aaa guibg=#1a202a   "1a1823
 hi NonText      guifg=#382920 guibg=bg
 
 hi Folded       guibg=#222038 guifg=#BBDDCC
 hi FoldColumn	guibg=black guifg=#dbcaa5
-hi LineNr       guibg=black guifg=#8095d5 
-hi StatusLine	guibg=grey guifg=#203ad5 gui=none
-hi StatusLineNC	guibg=grey guifg=#1b2058 gui=none
+hi LineNr       guibg=black guifg=#8095d5
+hi StatusLine	guibg=#394658 guifg=gray gui=none
+hi StatusLineNC	guibg=#394658 guifg=gray gui=none
 hi VertSplit	guibg=#22253d guifg=#223355  gui=none
 
 hi tablinesel   guibg=#515a71 guifg=#50aae5 gui=none
@@ -60,8 +53,8 @@ hi Special	guifg=#50a0b0
 hi Ignore       guifg=grey40
 hi Todo		guifg=orangered guibg=yellow2
 hi Error        guibg=#f06070
-hi Function     guifg=#a090a0 guibg=bg gui=None 
-hi Identifier   guifg=#a090b0   
+hi Function     guifg=#a090a0 guibg=bg gui=None
+hi Identifier   guifg=#a090b0
 highlight Exception gui=none guifg=#aaa4a0 guibg=bg
 """""this section borrowed from OceanDeep/Midnight"""""
 highlight Conditional gui=None guifg=#c08ac0 guibg=bg
@@ -85,7 +78,7 @@ hi Cursor       guibg=#cad5c0 guifg=#05293d
 
 
 hi Search       guibg=#808373 guifg=#3a4520
-hi IncSearch	guifg=#babeaa guibg=#3a4520 
+hi IncSearch	guifg=#babeaa guibg=#3a4520
 
 hi ModeMsg    	guifg=#00AACC
 hi MoreMsg      guifg=SeaGreen
@@ -102,7 +95,7 @@ hi WarningMsg	guifg=salmon
 
 " new Vim 7.0 items
 hi Pmenu        guibg=#3a6595 guifg=#9aadd5
-hi PmenuSel     guibg=#4a85ba guifg=#b0d0f0                    
+hi PmenuSel     guibg=#4a85ba guifg=#b0d0f0
 
 
 
@@ -167,8 +160,10 @@ hi Error	cterm=bold ctermfg=7 ctermbg=1
 
 " new Vim 7.0 items
 hi Pmenu        ctermbg=darkblue ctermfg=lightgrey
-hi PmenuSel     ctermbg=lightblue ctermfg=white                    
+hi PmenuSel     ctermbg=lightblue ctermfg=white
 
 "vim: sw=4
 
+" ColorColumn settings (>7.3)
+highlight ColorColumn ctermbg=gray guibg=#394658
 
