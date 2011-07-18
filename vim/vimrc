@@ -273,9 +273,13 @@
     set t_Co=256
 
 " Colorscheme
-    colorscheme watermark-mod
-    " colorscheme inkpot
-    " let g:inkpot_black_background = 1
+    colorscheme inkpot
+    let g:inkpot_black_background = 1
+
+    " Separate colorscheme for gui (watermark looks UGLY in CLI vim)
+    if has("gui_running")
+        colorscheme watermark-mod
+    endif
 
 
 """"""""""""""""""""""""""""""
