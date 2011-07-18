@@ -273,7 +273,7 @@
     set t_Co=256
 
 " Colorscheme
-    colorscheme baycomb
+    colorscheme watermark-mod
     " colorscheme inkpot
     " let g:inkpot_black_background = 1
 
