@@ -178,29 +178,6 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-    syntax on
-
-" Define custom extension(s) for syntax highlighting
-    au BufNewFile,BufRead *.md set filetype=markdown
-    au BufNewFile,BufRead *.tex set filetype=tex
-
-" Set font (possibly implement system-specific later using a function?)
-    set gfn=Bitstream\ Vera\ Sans\ Mono:h10
-
-" Set shell
-    if MySys() != "windows"
-        set shell=/bin/zsh
-    endif
-
-" Set background color/style
-    set background=dark
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable backups and swap files
@@ -275,6 +252,18 @@
 " Enable syntax highlighting
     syntax on
 
+" Define custom extension(s) for syntax highlighting
+    au BufNewFile,BufRead *.md set filetype=markdown
+    au BufNewFile,BufRead *.tex set filetype=tex
+
+" Set shell
+    if MySys() != "windows"
+        set shell=/bin/zsh
+    endif
+
+" Set background color/style
+    set background=dark
+
 " Set font (possibly implement system-specific later?  For now, install
 "   Bitstream Vera Sans Mono on all systems.  Can be found here:
 "   http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/
@@ -283,11 +272,8 @@
 " Set terminal color-count
     set t_Co=256
 
-" Set background color/style
-    set background=dark
-
 " Colorscheme
-    colorscheme zenburn
+    colorscheme baycomb
     " colorscheme inkpot
     " let g:inkpot_black_background = 1
 
