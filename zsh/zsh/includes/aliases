@@ -20,11 +20,11 @@ alias history='fc -l 1'
 
 # List direcory contents
 alias ls="ls --color=always -h"
-alias la='ls --color=always -ahf'
-alias lsa='ls --color=always -lah'
-alias l='ls --color=always -la'
-alias ll='ls --color=always -l'
-alias sl='ls --color=always -h' # In case of screw-ups (which pretty well describes me)
+alias la='ls -ahf --color=always'
+alias lsa='ls -lah --color=always'
+alias l='ls -la --color=always'
+alias ll='ls -l --color=always'
+alias sl='ls -h --color=always' # In case of screw-ups
 
 # Sometimes I work on vi-only systems -- this keeps me sane on the switch
 alias vi="vim"
