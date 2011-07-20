@@ -30,16 +30,7 @@ hi tablinesel   guibg=#515a71 guifg=#50aae5 gui=none
 hi tabline      guibg=#4d4d5f guifg=#5b7098 gui=none
 hi tablinefill  guibg=#2d2d3f guifg=#aaaaaa gui=none
 
-" syntax highlighting """"""""""""""""""""""""""""""""""""""""
-
-"set comments to grey on non-Windows OS's to make sure
-"it is readable
-if &term == "builtin_gui" || &term == "win32"
-	hi Comment		guifg=#369960  guibg=bg
-else
-	hi Comment		guifg=#559988  guibg=bg
-endif
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
+hi Comment		guifg=#369960  guibg=bg
 
 hi Title	guifg=#6d806a gui=none
 hi Underlined   guifg=#5b759a gui=none
