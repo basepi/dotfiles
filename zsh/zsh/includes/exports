@@ -23,7 +23,8 @@ export HAVE_DOT=YES
 export SHORT_NAMES=YES
 
 # PATH (yes, it's messy)
-export PATH=/usr/local/bin:/usr/bin:/usr/include:/usr/local/include:/usr/local/lib:/usr/lib:/usr/texbin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/:/Users/crakdmirror/bin:/usr/local/Cellar/python/2.7.1/bin:/usr/local/Cellar/ruby/1.9.2-p136/bin:/Applications/Doxygen.app/Contents/Resources:/Applications/Doxygen.app/Contents/MacOS:/Applications/Graphviz.app/Contents/MacOS:/usr/local/share/python
+export
+PATH=/usr/local/bin:/usr/bin:/usr/include:/usr/local/include:/usr/local/lib:/usr/lib:/usr/texbin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/:/Users/crakdmirror/bin:/usr/local/Cellar/python/2.7.1/bin:/usr/local/Cellar/ruby/1.9.2-p290/bin:/Applications/Doxygen.app/Contents/Resources:/Applications/Doxygen.app/Contents/MacOS:/Applications/Graphviz.app/Contents/MacOS:/usr/local/share/python
 
 # GREP
 export GREP_OPTIONS='--color=auto'
