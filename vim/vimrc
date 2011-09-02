@@ -334,7 +334,7 @@
         " Tell vim to first search the tab and window list for requested buffer
         set switchbuf=usetab
         " Always show tab bar
-        set stal=2
+        "set stal=2
     catch
     endtry
 
