@@ -261,8 +261,6 @@
         set shell=/bin/zsh
     endif
 
-" Set background color/style
-    set background=dark
 
 " Set font (possibly implement system-specific later?  For now, install
 "   Bitstream Vera Sans Mono on all systems.  Can be found here:
@@ -272,13 +270,13 @@
 " Set terminal color-count
     set t_Co=256
 
-" Colorscheme
-    colorscheme watermark-term
+" Set background color/style
+    set background=dark
 
-    " Separate colorscheme for gui (watermark looks UGLY in CLI vim)
-    if has("gui_running")
-        colorscheme watermark-mod
-    endif
+" Colorscheme
+    " Uncomment the following line if not using custom iTerm2 solarized colors
+    "let g:solarized_termcolors=256
+    colorscheme solarized
 
 
 """"""""""""""""""""""""""""""
