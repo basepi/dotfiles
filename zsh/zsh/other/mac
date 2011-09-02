@@ -2,7 +2,7 @@
 
 # I use mvim on osx, almost exclusively.  The vi keybinding in aliases allows
 # me to launch the CLI version if necessary
-alias vim="mvim"
+#alias vim="mvim"
 
 # Use gls instead of ls, assuming coreutils is installed, for 256 colors in ls
 alias ls='gls --color=always -h'
