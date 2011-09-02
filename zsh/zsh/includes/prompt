@@ -18,7 +18,7 @@ local d="%{$FX[reset]$FG[025]%}"
 local name="%{$FX[reset]$FG[133]%}%n"
 local host="%{$FX[reset]$FG[136]%}%m"
 local green="%{$FX[reset]$FG[070]%}"
-local white="%{$FG[007]%}"
+local white="%{$FG[012]%}"
 local tstamp="%{$FG[037]%}%*"
 
 ZSH_GIT_PROMPT_PREFIX=" [%{$FX[reset]$FG[133]%}"
