@@ -11,8 +11,17 @@
 !vim/
 !vim/vimrc
 !vim/vim/
+!vim/vim/*
 !vim/vim/plugin/
 !vim/vim/plugin/*
+!vim/vim/ftplugin/
+!vim/vim/ftplugin/*
+!vim/vim/ftplugin/latex-suite/
+!vim/vim/ftplugin/latex-suite/*
+!vim/vim/indent/
+!vim/vim/indent/*
+!vim/vim/compiler/
+!vim/vim/compiler/*
 !vim/vim/backup/
 !vim/vim/backup/README
 !vim/vim/colors/
