@@ -254,7 +254,7 @@
 
 " Define custom extension(s) for syntax highlighting
     au BufNewFile,BufRead *.md set filetype=markdown
-    au BufNewFile,BufRead *.tex set filetype=latex
+    au BufNewFile,BufRead *.tex set filetype=tex
 
 " Set shell
     if MySys() != "windows"
@@ -390,15 +390,6 @@
     map <leader>cc :botright cope<cr>
     map <leader>n :cn<cr>
     map <leader>p :cp<cr>
-
-
-""""""""""""""""""""""""""""""
-" => Vim-LaTeX Suite
-""""""""""""""""""""""""""""""
-" Fix some issues with grep
-set grepprg=grep\ -nH\ $*
-" Make new .tex files use latex, not plaintex
-let g:tex_flavor='latex'
 
 
 """"""""""""""""""""""""""""""
