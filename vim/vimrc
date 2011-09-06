@@ -254,6 +254,7 @@
 
 " Define custom extension(s) for syntax highlighting
     au BufNewFile,BufRead *.md set filetype=markdown
+    au BufNewFile,BufRead *.tex set filetype=latex
 
 " Set shell
     if MySys() != "windows"
