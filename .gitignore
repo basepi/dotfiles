@@ -36,9 +36,9 @@
 !hg/
 !hg/*
 
-# Screen
-!screen/
-!screen/*
+# Tmux
+!tmux/
+!tmux/*
 
 # Zsh
 !zsh/
