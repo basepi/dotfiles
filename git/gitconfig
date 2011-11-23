@@ -15,7 +15,13 @@
 [push]
     default = matching
 [core]
-    excludesfile = "~/.gitexcludes"
+	excludesfile = /Users/crakdmirror/.gitexcludes
     editor = vim
 [merge]
     tool = vimdiff
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
