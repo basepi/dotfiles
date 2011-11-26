@@ -449,9 +449,9 @@
 " => Python
 """"""""""""""""""""""""""""""
 " Save and execute python3 file being edited with <leader>e:
-map <buffer> <leader>e :w<CR>:!/usr/bin/env python3 % <CR>
+    nmap <leader>e :w<CR>:!/usr/bin/env python3 % <CR>
 " Save and execute python3 file being edited with <leader><Shift+e>:
-map <buffer> <leader><S-e> :w<CR>:!/usr/bin/env python % <CR>
+    nmap <leader><S-e> :w<CR>:!/usr/bin/env python % <CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
