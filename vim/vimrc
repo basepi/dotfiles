@@ -446,7 +446,7 @@
 
 
 """"""""""""""""""""""""""""""
-" => Python grep
+" => Python
 """"""""""""""""""""""""""""""
 " Save and execute python3 file being edited with <leader>e:
 map <buffer> <leader>e :w<CR>:!/usr/bin/env python3 % <CR>
