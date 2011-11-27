@@ -27,6 +27,8 @@
 !vim/vim/spell/*
 !vim/vim/undodir/
 !vim/vim/undodir/README
+!vim/vim/nerdtree_plugin/
+!vim/vim/nerdtree_plugin/*
 
 # Git
 !git/
