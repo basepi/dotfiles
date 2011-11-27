@@ -410,13 +410,20 @@
 """"""""""""""""""""""""""""""
 " => yankring plugin
 """"""""""""""""""""""""""""""
-" Map F11 to open a buffer showing the yankring
+" Map <leader>yr to open a buffer showing the yankring
     nnoremap <silent> <leader>yr :YRShow<CR>
     if MySys() == "windows"
         let g:yankring_history_dir = 'C:\\vim\\vimfiles\\misc\\'
     else
         let g:yankring_history_dir = '~/.vim/misc/'
     endif
+
+
+""""""""""""""""""""""""""""""
+" => NERDTree plugin
+""""""""""""""""""""""""""""""
+" Map <leader>t to open a NERDTree buffer
+    nnoremap <silent> <leader>t :NERDTree<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
