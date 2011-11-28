@@ -98,8 +98,8 @@
 " Ignore when tab-completing
     set wildignore+=*.o,*.obj,.git,*.rbc,*~
 
-" Turn on line numbers
-    set number
+" Turn off line numbers
+    set nonumber
 " Always show current cursor position
     set ruler
 
@@ -371,6 +371,9 @@
 
 " Easily toggle between tabs and spaces
     nmap <F3> :set expandtab!<CR>
+
+" Easily toggle between line numbers and no line numbers
+    nmap <F4> :set number!<CR>
 
 " Toggle line numbers and fold column for easy copying via <F2>:
     nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
