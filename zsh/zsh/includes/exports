@@ -11,7 +11,11 @@ export CLICOLOR='Yes'
 # I use dircolors now, but this LSCOLORS is easier on the eyes than the default
 # if you're stuck without 256 colors in ls.
 #export LSCOLORS='cxfxexdxbxegedabagacad'
-export LANG=en_US.UTF-8
+
+# Unicode support
+#export LANG=en_US.UTF-8
+# ASCII version
+export LANG=C
 
 # Editor settings
 export EDITOR=vim
