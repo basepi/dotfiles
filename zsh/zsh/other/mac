@@ -12,10 +12,6 @@ alias l='gls --color=always -la'
 alias ll='gls --color=always -l'
 alias sl='gls --color=always -h' # In case of screw-ups (which pretty well describes me)
 
-# Set dircolors using gdircolors (part of coreutils from homebrew)
-# There's probably a more elegant way of doing this, but I suck at shell
-# scripts.  =P
-gdircolors -b $ZSH/other/dircolors > tmp.zsh
-source tmp.zsh
-rm tmp.zsh
+# Set dircolors for ls
+source <(gdircolors -b $ZSH/other/dircolors)
 

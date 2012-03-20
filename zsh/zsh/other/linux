@@ -1,7 +1,5 @@
 # Linux
 
 # Set dircolors for ls
-dircolors -b $ZSH/other/dircolors > tmp.zsh
-source tmp.zsh
-rm tmp.zsh
+source <(dircolors -b $ZSH/other/dircolors)
 
