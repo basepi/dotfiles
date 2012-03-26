@@ -13,6 +13,14 @@
 !vim/vim/
 !vim/vim/plugin/
 !vim/vim/plugin/*
+!vim/vim/syntax/
+!vim/vim/syntax/*
+!vim/vim/ftplugin/
+!vim/vim/ftplugin/*
+!vim/vim/ftdetect/
+!vim/vim/ftdetect/*
+!vim/vim/indent/
+!vim/vim/indent/*
 !vim/vim/backup/
 !vim/vim/backup/README
 !vim/vim/colors/
