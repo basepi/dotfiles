@@ -89,7 +89,7 @@
     " Always show the statusline
     set laststatus=2
     " Format the statusline
-    set statusline=\ %{HasTabs()}%{HasPaste()}\ [%F%m%r%h]\ %w\ [CWD:\ %{CurDir()}]\ [Line:\ %l/%L:%c]
+    set statusline=\ %{HasTabs()}%{HasPaste()}\ [%F%m%r%h]\ %w\ [Line:\ %l/%L:%c]
 
 " Turn on wildmenu
     set wildmenu
