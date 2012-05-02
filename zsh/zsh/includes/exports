@@ -13,9 +13,9 @@ export CLICOLOR='Yes'
 #export LSCOLORS='cxfxexdxbxegedabagacad'
 
 # Unicode support
-#export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 # ASCII version
-export LANG=C
+#export LANG=C
 
 # Editor settings
 export EDITOR=vim
