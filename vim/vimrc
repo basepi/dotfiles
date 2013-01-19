@@ -320,8 +320,8 @@
 " Use the arrows to something useful
     map <up> :bn<cr>
     map <down> :bp<cr>
-    map <right> :tabn<cr>
-    map <left> :tabp<cr>
+    map <right> gt
+    map <left> gT
 
 " Tab configuration
     map <leader>tn :tabnew<cr>
