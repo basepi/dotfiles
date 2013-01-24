@@ -4,6 +4,3 @@
 [submodule "vim/vim/bundle/nerdtree"]
 	path = vim/vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "vim/vim/bundle/bufexplorer"]
-	path = vim/vim/bundle/bufexplorer
-	url = git://github.com/basepi/vim-bufexplorer.git
