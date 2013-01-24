@@ -43,6 +43,10 @@
     let maplocalleader = ","
     let g:maplocalleader = ","
 
+" Initialize Pathogen
+    execute pathogen#infect()
+    execute pathogen#helptags()
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
