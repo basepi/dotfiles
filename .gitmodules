@@ -7,3 +7,6 @@
 [submodule "vim/vim/bundle/bufexplorer"]
 	path = vim/vim/bundle/bufexplorer
 	url = git://github.com/basepi/vim-bufexplorer.git
+[submodule "vim/vim/bundle/surround"]
+	path = vim/vim/bundle/surround
+	url = git://github.com/tpope/vim-surround.git
