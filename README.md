@@ -27,6 +27,16 @@ from the root directory of the repository, and it will symlink the files of
 your choosing into your home directory. Read the disclaimer in the script
 source code before using.
 
+Additionally, you should run the following commands to get all the plugins for
+vim (run from the root of the repo):
+
+    git submodule init
+    git submodule update
+
+To update the plugins, run:
+
+    git submodule foreach git pull
+
 License
 -------
 
