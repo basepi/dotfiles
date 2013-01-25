@@ -15,32 +15,12 @@
 !vim/vim/autoload/*
 !vim/vim/bundle/
 !vim/vim/bundle/*
-!vim/vim/plugin/
-!vim/vim/plugin/*
-!vim/vim/syntax/
-!vim/vim/syntax/*
-!vim/vim/ftplugin/
-!vim/vim/ftplugin/*
-!vim/vim/ftdetect/
-!vim/vim/ftdetect/*
-!vim/vim/indent/
-!vim/vim/indent/*
 !vim/vim/backup/
 !vim/vim/backup/README
-!vim/vim/colors/
-!vim/vim/colors/*
-!vim/vim/doc/
-!vim/vim/doc/*
-!vim/vim/misc/
-!vim/vim/misc/README
-!vim/vim/plugin/
-!vim/vim/plugin/*
 !vim/vim/spell/
 !vim/vim/spell/*
 !vim/vim/undodir/
 !vim/vim/undodir/README
-!vim/vim/nerdtree_plugin/
-!vim/vim/nerdtree_plugin/*
 
 # Git
 !git/

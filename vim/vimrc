@@ -405,18 +405,6 @@
 
 
 """"""""""""""""""""""""""""""
-" => yankring plugin
-""""""""""""""""""""""""""""""
-" Map <leader>yr to open a buffer showing the yankring
-    nnoremap <silent> <leader>yr :YRShow<CR>
-    if MySys() == "windows"
-        let g:yankring_history_dir = 'C:\\vim\\vimfiles\\misc'
-    else
-        let g:yankring_history_dir = '~/.vim/misc'
-    endif
-
-
-""""""""""""""""""""""""""""""
 " => NERDTree plugin
 """"""""""""""""""""""""""""""
 " Map <leader>f to open a NERDTree buffer
@@ -454,7 +442,7 @@
 """"""""""""""""""""""""""""""
 " Save and execute python3 file being edited with <leader>e:
     nmap <leader>e :w<CR>:!/usr/bin/env python3 % <CR>
-" Save and execute python3 file being edited with <leader><Shift+e>:
+" Save and execute python2 file being edited with <leader><Shift+e>:
     nmap <leader><S-e> :w<CR>:!/usr/bin/env python % <CR>
 
 
