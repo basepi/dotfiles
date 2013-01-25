@@ -209,7 +209,7 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, Tab, Indent, and Whitespace
+" => Text, Tab, Indent, Whitespace, Folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Don't soft-wrap lines
     set nowrap
@@ -225,6 +225,10 @@
 " Enable smart indenting and autoindenting
     set smartindent
     set autoindent
+
+" Set folding method and level
+    set foldmethod=indent
+    set foldlevel=99
 
 " Highlight trailing whitespace (with support for buffer and
 "   colorscheme matching)
