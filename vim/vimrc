@@ -405,21 +405,6 @@
 
 
 """"""""""""""""""""""""""""""
-" => MRU plugin
-""""""""""""""""""""""""""""""
-    let MRU_Max_Entries = 400
-    map <leader>r :MRU<CR>
-
-
-" Set location for MRU plugin's file
-    if MySys() == "windows"
-        let MRU_file='C:\\vim\\vimfiles\\misc\\vim_mru_files'
-    else
-        let MRU_file='~/.vim/misc/vim_mru_files'
-    endif
-
-
-""""""""""""""""""""""""""""""
 " => yankring plugin
 """"""""""""""""""""""""""""""
 " Map <leader>yr to open a buffer showing the yankring
