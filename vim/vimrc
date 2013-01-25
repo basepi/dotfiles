@@ -62,11 +62,11 @@
     set autoread
 
 " When vimrc is edited, reload it
-    if MySys() == "windows"
-        autocmd! bufwritepost vimrc,.vimrc,_vimrc source C:\\vim\\_vimrc
-    else
-        autocmd! bufwritepost vimrc,.vimrc,_vimrc source ~/.vimrc
-    endif
+"   if MySys() == "windows"
+"       autocmd! bufwritepost vimrc,.vimrc,_vimrc source C:\\vim\\_vimrc
+"   else
+"       autocmd! bufwritepost vimrc,.vimrc,_vimrc source ~/.vimrc
+"   endif
 
 " Default file types
     set ffs=unix,mac,dos
@@ -413,6 +413,19 @@
 """"""""""""""""""""""""""""""
 " Map <leader>f to open a NERDTree buffer
     nnoremap <silent> <leader>f :NERDTree<CR>
+
+
+""""""""""""""""""""""""""""""
+" => UltiSnips plugin
+""""""""""""""""""""""""""""""
+" Split window when editing snippets
+    let g:UltiSnipsEditSplit="vertical"
+" Change shortcut to list snippets to something that works
+    let g:UltiSnipsListSnippets="<c-z>"
+" Use TextMate-like triggers
+   let g:UltiSnipsExpandTrigger="<tab>"
+   let g:UltiSnipsJumpForwardTrigger="<tab>"
+   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
