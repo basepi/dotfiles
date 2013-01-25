@@ -16,3 +16,6 @@
 [submodule "vim/vim/bundle/racket"]
 	path = vim/vim/bundle/racket
 	url = git://github.com/wlangstroth/vim-racket.git
+[submodule "vim/vim/bundle/ultisnips2"]
+	path = vim/vim/bundle/ultisnips
+	url = git://github.com/SirVer/ultisnips.git
