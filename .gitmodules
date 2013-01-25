@@ -19,3 +19,6 @@
 [submodule "vim/vim/bundle/ultisnips2"]
 	path = vim/vim/bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
+[submodule "vim/vim/bundle/salt"]
+	path = vim/vim/bundle/salt
+	url = git://github.com/saltstack/salt-vim.git
