@@ -28,3 +28,6 @@
 [submodule "vim/vim/bundle/bufexplorer-official"]
 	path = vim/vim/bundle/bufexplorer
 	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "vim/vim/bundle/supertab"]
+	path = vim/vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
