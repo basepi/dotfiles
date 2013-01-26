@@ -233,13 +233,16 @@
 "   colorscheme matching)
 " Also note that it won't highlight trailing whitespace on
 "   a line currently being edited
-    autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+    au ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
     au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
     au InsertLeave * match ExtraWhitespace /\s\+$/
+    au BufWinEnter * match ExtraWhitespace /\s\+$/
 
 " Highlights related to tabs
-    highlight TabWhitespace ctermbg=darkgray guibg=#101010
-    match TabWhitespace /\t/
+    au ColorScheme * highlight TabWhitespace ctermbg=black guibg=#101010
+    au InsertEnter * match TabWhitespace /\t/
+    au InsertLeave * match TabWhitespace /\t/
+    au BufWinEnter * match TabWhitespace /\t/
 
 " Turn on column 80 highlighting and textwidth 79 for all buffers by default
     au BufEnter * set colorcolumn=80
