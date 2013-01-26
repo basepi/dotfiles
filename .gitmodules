@@ -22,3 +22,6 @@
 [submodule "vim/vim/bundle/salt"]
 	path = vim/vim/bundle/salt
 	url = git://github.com/saltstack/salt-vim.git
+[submodule "vim/vim/bundle/gundo"]
+	path = vim/vim/bundle/gundo
+	url = git://github.com/sjl/gundo.vim.git

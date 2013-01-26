@@ -421,11 +421,18 @@
 " Split window when editing snippets
     let g:UltiSnipsEditSplit="vertical"
 " Change shortcut to list snippets to something that works
-    let g:UltiSnipsListSnippets="<c-z>"
+    let g:UltiSnipsListSnippets="<F5>"
 " Use TextMate-like triggers
-   let g:UltiSnipsExpandTrigger="<tab>"
-   let g:UltiSnipsJumpForwardTrigger="<tab>"
-   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+""""""""""""""""""""""""""""""
+" => Gundo plugin
+""""""""""""""""""""""""""""""
+" Map the undo tree (Gundo) toggle
+    nnoremap <c-g> :GundoToggle<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
