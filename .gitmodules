@@ -25,3 +25,6 @@
 [submodule "vim/vim/bundle/gundo"]
 	path = vim/vim/bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
+[submodule "vim/vim/bundle/git"]
+	path = vim/vim/bundle/git
+	url = git://github.com/tpope/vim-git.git
