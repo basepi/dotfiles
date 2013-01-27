@@ -49,3 +49,6 @@
 [submodule "vim/vim/bundle/pytest"]
 	path = vim/vim/bundle/pytest
 	url = git://github.com/alfredodeza/pytest.vim.git
+[submodule "vim/vim/bundle/tasklist"]
+	path = vim/vim/bundle/tasklist
+	url = git://github.com/vim-scripts/TaskList.vim.git
