@@ -43,3 +43,6 @@
 [submodule "vim/vim/bundle/pydoc"]
 	path = vim/vim/bundle/pydoc
 	url = git://github.com/fs111/pydoc.vim.git
+[submodule "vim/vim/bundle/pep8"]
+	path = vim/vim/bundle/pep8
+	url = git://github.com/vim-scripts/pep8.git

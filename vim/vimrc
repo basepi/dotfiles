@@ -402,6 +402,41 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Pressing <leader>ss will toggle spell checking
+    map <leader>ss :setlocal spell!<cr>
+
+"Shortcuts using <leader>
+    map <leader>sn ]s
+    map <leader>sp [s
+    map <leader>sa zg
+    map <leader>s? z=
+
+
+""""""""""""""""""""""""""""""
+" => Vim grep
+""""""""""""""""""""""""""""""
+" Define directories for vimgrep to skip
+    let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated .git'
+
+" Define grep program (I don't know a built-in one for Windows,
+"   so Windows will not define this.)
+    if MySys() != "windows"
+        set grepprg=/bin/grep\ -nH
+    endif
+
+
+""""""""""""""""""""""""""""""
+" => Python
+""""""""""""""""""""""""""""""
+" Save and execute python3 file being edited with <leader>e:
+    nmap <leader>e :w<CR>:!/usr/bin/env python3 % <CR>
+" Save and execute python2 file being edited with <leader><Shift+e>:
+    nmap <leader><S-e> :w<CR>:!/usr/bin/env python % <CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Do :help cope if you are unsure what cope is. It's super useful!
@@ -458,39 +493,11 @@
       \ }
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Pressing <leader>ss will toggle spell checking
-    map <leader>ss :setlocal spell!<cr>
-
-"Shortcuts using <leader>
-    map <leader>sn ]s
-    map <leader>sp [s
-    map <leader>sa zg
-    map <leader>s? z=
-
-
 """"""""""""""""""""""""""""""
-" => Vim grep
+" => PEP8 plugin
 """"""""""""""""""""""""""""""
-" Define directories for vimgrep to skip
-    let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated .git'
-
-" Define grep program (I don't know a built-in one for Windows,
-"   so Windows will not define this.)
-    if MySys() != "windows"
-        set grepprg=/bin/grep\ -nH
-    endif
-
-
-""""""""""""""""""""""""""""""
-" => Python
-""""""""""""""""""""""""""""""
-" Save and execute python3 file being edited with <leader>e:
-    nmap <leader>e :w<CR>:!/usr/bin/env python3 % <CR>
-" Save and execute python2 file being edited with <leader><Shift+e>:
-    nmap <leader><S-e> :w<CR>:!/usr/bin/env python % <CR>
+" Set key to trigger PEP8
+    let g:pep8_map='<leader>8'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
