@@ -34,6 +34,3 @@
 [submodule "vim/vim/bundle/ctrlp"]
 	path = vim/vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "vim/vim/bundle/pyflakes"]
-	path = vim/vim/bundle/pyflakes
-	url = git://github.com/kevinw/pyflakes-vim.git
