@@ -46,3 +46,6 @@
 [submodule "vim/vim/bundle/pep8"]
 	path = vim/vim/bundle/pep8
 	url = git://github.com/vim-scripts/pep8.git
+[submodule "vim/vim/bundle/pytest"]
+	path = vim/vim/bundle/pytest
+	url = git://github.com/alfredodeza/pytest.vim.git
