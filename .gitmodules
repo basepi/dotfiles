@@ -52,3 +52,6 @@
 [submodule "vim/vim/bundle/tasklist"]
 	path = vim/vim/bundle/tasklist
 	url = git://github.com/vim-scripts/TaskList.vim.git
+[submodule "vim/vim/bundle/rope"]
+	path = vim/vim/bundle/rope
+	url = git://github.com/sontek/rope-vim.git
