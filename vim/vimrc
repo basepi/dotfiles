@@ -227,7 +227,7 @@
 
 " Set folding method and level
     set foldmethod=indent
-    set foldlevel=99
+    set foldlevel=1
 
 " Highlight trailing whitespace (with support for buffer and
 "   colorscheme matching)
