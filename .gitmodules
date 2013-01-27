@@ -55,6 +55,3 @@
 [submodule "vim/vim/bundle/rope"]
 	path = vim/vim/bundle/rope
 	url = git://github.com/sontek/rope-vim.git
-[submodule "vim/vim/bundle/conque"]
-	path = vim/vim/bundle/conque
-	url = git://github.com/basepi/conque.git
