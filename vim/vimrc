@@ -500,6 +500,24 @@
     let g:pep8_map='<leader>8'
 
 
+""""""""""""""""""""""""""""""
+" => SuperTab plugin (and other tab-completion-related-stuff)
+""""""""""""""""""""""""""""""
+" Set up context-sensitive completion
+    au FileType python set omnifunc=pythoncomplete#Complete
+    let g:SuperTabDefaultCompletionType = "context"
+
+" Enable menu and pydoc preview
+    set completeopt=menuone,longest,preview
+
+" Make sure the current directory is in the python path (for omni-completion)
+python << EOF
+import sys
+import os
+sys.path.append(os.getcwd())
+EOF
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
