@@ -425,8 +425,9 @@
 " Save and execute python2 file being edited with <leader><Shift+e>:
     nnoremap <leader><S-e> :w<CR>:!/usr/bin/env python % <CR>
 
-" Disable smartindent for python files (do I want this?)
-    au FileType python  set nosmartindent
+" Disable smartindent for python files (disabling for now, not sure what it's
+" accomplishing)
+    "au FileType python  set nosmartindent
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
