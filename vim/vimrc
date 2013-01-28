@@ -298,11 +298,6 @@
 
 " When you press gv you vimgrep after the selected text
     vnoremap <silent> gv :call VisualSearch('gv')<CR>
-    " Search for some text recursively in the current working directory
-    "   Assuming it works (and I've pulled in all the necessary bindings),
-    "   should use <leader>cc to display all matches and <leader>n and
-    "   <leader>p to traverse them.
-    map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
