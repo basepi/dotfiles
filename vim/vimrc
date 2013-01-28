@@ -375,10 +375,10 @@
     inoremap jj <Esc>
 
 " Easily toggle between tabs and spaces
-    nmap <F3> :set expandtab!<CR>
+    nnoremap <F3> :set expandtab!<CR>
 
 " Easily toggle between line numbers and no line numbers
-    nmap <F4> :set number!<CR>
+    nnoremap <F4> :set number!<CR>
 
 " Toggle line numbers and fold column for easy copying via <F2>:
     nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
@@ -395,13 +395,13 @@
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Pressing <leader>ss will toggle spell checking
-    map <leader>ss :setlocal spell!<cr>
+    nnoremap <leader>ss :setlocal spell!<cr>
 
 "Shortcuts using <leader>
-    map <leader>sn ]s
-    map <leader>sp [s
-    map <leader>sa zg
-    map <leader>s? z=
+    noremap <leader>sn ]s
+    noremap <leader>sp [s
+    noremap <leader>sa zg
+    noremap <leader>s? z=
 
 
 """"""""""""""""""""""""""""""
