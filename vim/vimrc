@@ -434,9 +434,9 @@
 " => Cope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Do :help cope if you are unsure what cope is. It's super useful!
-    map <leader>cc :botright cope<cr>
-    map <leader>n :cn<cr>
-    map <leader>p :cp<cr>
+    nnoremap <leader>cc :botright cope<cr>
+    nnoremap <leader>n :cn<cr>
+    nnoremap <leader>p :cp<cr>
 
 
 """"""""""""""""""""""""""""""
