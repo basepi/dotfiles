@@ -225,9 +225,9 @@
     set smartindent
     set autoindent
 
-" Set folding method and level
+" Set folding method and level (start with no folds)
     set foldmethod=indent
-    set foldlevel=1
+    set foldlevel=99
 
 " Highlight trailing whitespace (with support for buffer and
 "   colorscheme matching)
