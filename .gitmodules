@@ -58,3 +58,6 @@
 [submodule "vim/vim/bundle/vim-conque"]
 	path = vim/vim/bundle/conque
 	url = git://github.com/basepi/vim-conque.git
+[submodule "vim/vim/bundle/minibufexpl"]
+	path = vim/vim/bundle/minibufexpl
+	url = git://github.com/fholgado/minibufexpl.vim.git
