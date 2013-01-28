@@ -586,17 +586,6 @@ function! HasTabs()
     endif
 endfunction
 
-" Delete trailing whitespace (don't actually use, because I don't
-"   know how good it is, and with this vimrc, trailing whitespace
-"   is already highlighted, so I always delete it manually.  Might
-"   be useful for using someone else's codebase, or when coming from
-"   another editor.  Bind it to a key if you want!)
-func! DeleteTrailingWS()
-    exe "normal mz"
-    %s/\s\+$//ge
-    exe "normal `z"
-endfunc
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Possible alternate configuration stuff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
