@@ -17,13 +17,14 @@ import os
 import glob
 import shutil
 
+
 def installdotfiles():
     'Script to install dotfiles, including user interaction in install process'
 
     # Introduction and warnings
     print("Welcome to Colton's dotfile installation script!")
     print("Please note that existing files will be renamed with a .old",
-            "extension, and existing .old files may be overwritten!")
+          "extension, and existing .old files may be overwritten!")
     print("Please see disclaimer in source code before using this script.")
 
     # Inform user of destination, ask for permission
@@ -55,7 +56,7 @@ def installdotfiles():
             [os.path.join(f, x) for x in os.listdir(f) if x[0] != '.'])
 
     # Check for already-existing files, move to `$FILE`.old
-    for f,path in [(os.path.split(x)[-1],x) for x in files]:
+    for f, path in [(os.path.split(x)[-1], x) for x in files]:
         currentpath = os.path.expanduser(os.path.join('~', '.' + f))
         if os.path.islink(currentpath):
             os.remove(currentpath)
@@ -87,4 +88,3 @@ if __name__ == '__main__':
         installdotfiles()
     except KeyboardInterrupt:
         print('Aborting...')
-
