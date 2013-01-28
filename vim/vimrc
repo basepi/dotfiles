@@ -320,10 +320,10 @@
     noremap <leader>baaa :1,300 bd!<cr>
 
 " Use the arrows to something useful
-    map <up> :bn<cr>
-    map <down> :bp<cr>
-    map <right> gt
-    map <left> gT
+    nnoremap <right> :bn<cr>
+    nnoremap <left> :bp<cr>
+    nnoremap <up> gt
+    nnoremap <down> gT
 
 " Tab configuration
     map <leader>tn :tabnew<cr>
