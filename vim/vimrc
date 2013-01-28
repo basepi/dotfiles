@@ -361,7 +361,7 @@
     nnoremap <leader>bb :cd ..<cr>
 
 " Remove the Windows ^M - when the encodings gets messed up
-    nnoremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+    nnoremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Move a line of text using CTRL+SHIFT+[jk]
     nnoremap <C-S-j> mz:m+<cr>`z
@@ -382,6 +382,17 @@
 
 " Toggle line numbers and fold column for easy copying via <F2>:
     nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+
+" Move through vim's location lists (for example, syntastic errors)
+    nnoremap <leader>j :lnext<CR>
+    nnoremap <leader>J :lprev<CR>
+    nnoremap <leader>k :lprev<CR>
+
+" Open quickfix window, move through error list
+    nnoremap <leader>cc :botright cope<cr>
+    nnoremap <leader>n :cn<cr>
+    nnoremap <leader>N :cp<cr>
+    nnoremap <leader>p :cp<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
