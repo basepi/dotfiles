@@ -326,13 +326,13 @@
     nnoremap <down> gT
 
 " Tab configuration
-    map <leader>tn :tabnew<cr>
-    map <leader>te :tabedit 
-    map <leader>tc :tabclose<cr>
-    map <leader>tm :tabmove 
+    nnoremap <leader>tn :tabnew<cr>
+    nnoremap <leader>te :tabedit 
+    nnoremap <leader>tc :tabclose<cr>
+    nnoremap <leader>tm :tabmove 
 
 " When pressing <leader>cd switch to the directory of the open buffer
-    map <leader>cd :cd %:p:h<cr>
+    nnoremap <leader>cd :cd %:p:h<cr>
 
 " Specify the behavior when switching between buffers
     try
@@ -348,20 +348,20 @@
 " => Other key bindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map visual-mode spacebar to center screen on cursor
-    nmap <space> zz
+    nnoremap <space> zz
 
-" Map visual- and insert-mode F1 to Esc to avoid accidental help calls
-    map <F1> <Esc>
-    imap <F1> <Esc>
+" Map normal-, visual-, and insert-mode F1 to Esc to avoid accidental help calls
+    noremap <F1> <Esc>
+    inoremap <F1> <Esc>
 
 " Map <leader>pp to toggle paste mode
-    map <leader>pp :setlocal paste!<cr>
+    nnoremap <leader>pp :setlocal paste!<cr>
 
 " Map <leader>bb to change to parent directory
-    map <leader>bb :cd ..<cr>
+    nnoremap <leader>bb :cd ..<cr>
 
 " Remove the Windows ^M - when the encodings gets messed up
-    noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+    nnoremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
     if MySys() == "mac"
