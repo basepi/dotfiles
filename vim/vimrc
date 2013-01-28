@@ -379,7 +379,7 @@
 " Easy exit from insert mode using jj (often not available in
 "   vim emulation plugins in IDEs, etc, so you might not want
 "   to get reliant on this.)
-    "inoremap jj <Esc>
+    inoremap jj <Esc>
 
 " Easily toggle between tabs and spaces
     nmap <F3> :set expandtab!<CR>
