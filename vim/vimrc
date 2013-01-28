@@ -317,7 +317,7 @@
     command! Bclose call <SID>BufcloseCloseIt()
 
 " Close all the buffers
-    noremap <leader>ba :1,300 bd!<cr>
+    noremap <leader>baaa :1,300 bd!<cr>
 
 " Use the arrows to something useful
     map <up> :bn<cr>
