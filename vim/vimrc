@@ -514,6 +514,13 @@ sys.path.append(os.getcwd())
 EOF
 
 
+""""""""""""""""""""""""""""""
+" => Ack plugin
+""""""""""""""""""""""""""""""
+" Bind key to search for what's under the cursor in Ack
+    nnoremap <leader>a <Esc>:Ack!
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
