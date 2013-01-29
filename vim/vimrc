@@ -528,6 +528,16 @@ EOF
     nnoremap <leader>. :RopeGotoDefinition<CR>
 
 
+""""""""""""""""""""""""""""""
+" => Powerline plugin (not currently installed)
+""""""""""""""""""""""""""""""
+" Set theme and colorscheme
+    let g:Powerline_theme = 'default'
+    let g:Powerline_colorscheme = 'solarized16'
+" Other options
+    let g:Powerline_stl_path_style = 'short'
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
