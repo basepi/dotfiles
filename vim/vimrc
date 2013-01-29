@@ -521,6 +521,13 @@ EOF
     nnoremap <leader>a <Esc>:Ack!
 
 
+""""""""""""""""""""""""""""""
+" => Rope plugin
+""""""""""""""""""""""""""""""
+" Map go-to-definition in Rope
+    nnoremap <leader>. :RopeGotoDefinition<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
