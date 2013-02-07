@@ -15,7 +15,7 @@
 [push]
     default = matching
 [core]
-	excludesfile = /Users/crakdmirror/.gitexcludes
+	excludesfile = ~/.gitexcludes
     editor = vim
 [merge]
     tool = vimdiff
