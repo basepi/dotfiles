@@ -609,11 +609,11 @@ endfunction
 "   home directory as necessary for your username, etc)
 function! CurDir()
     if MySys() == "mac"
-        let curdir = substitute(getcwd(), '/Users/crakdmirror/', "~/", "g")
+        let curdir = substitute(getcwd(), '/Users/basepi/', "~/", "g")
     elseif MySys() == "windows"
-        let curdir = substitute(getcwd(), 'C:\\Users\\crakdmirror\\', "~\\", "g")
+        let curdir = substitute(getcwd(), 'C:\\Users\\basepi\\', "~\\", "g")
     elseif MySys() == "linux"
-        let curdir = substitute(getcwd(), '/home/crakdmirror/', "~/", "g")
+        let curdir = substitute(getcwd(), '/home/basepi/', "~/", "g")
     else
         let curdir = getcwd()
     endif
