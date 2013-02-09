@@ -534,6 +534,13 @@ EOF
 
 
 """"""""""""""""""""""""""""""
+" => PyDoc plugin
+""""""""""""""""""""""""""""""
+" Map go-to-definition in Rope
+    let g:pydoc_cmd = '/usr/bin/pydoc'
+
+
+""""""""""""""""""""""""""""""
 " => Powerline plugin (not currently installed)
 """"""""""""""""""""""""""""""
 " Set theme and colorscheme
