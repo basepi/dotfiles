@@ -244,16 +244,19 @@
     au InsertLeave * match TabWhitespace /\t/
     au BufWinEnter * match TabWhitespace /\t/
 
-" Turn on column 80 highlighting and textwidth 79 for all buffers by default
-    au BufEnter * set colorcolumn=80
-    au BufEnter * set textwidth=79
+" Turn on column 80 highlighting and textwidth 0 for all buffers by default
+    set colorcolumn=80
+    set textwidth=0
+" Set textwidth for certain filetypes
+    au FileType tex set textwidth=79
+    au FileType text set textwidth=79
 " Modify column highlighting for specified filetypes on BufEnter
     au BufEnter COMMIT_EDITMSG set colorcolumn=73
 " Handle textwidth for various filetypes (used for autoformatting, gq)
     au BufEnter COMMIT_EDITMSG set textwidth=72
 
 " Define FileTypes which use normal tab characters instead of spaces
-    au FileType make    set noexpandtab
+    au FileType make set noexpandtab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
