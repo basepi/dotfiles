@@ -229,6 +229,12 @@
     set foldmethod=indent
     set foldlevel=99
 
+" Highlights related to tabs
+    au ColorScheme * highlight TabWhitespace ctermbg=black guibg=#101010
+    au InsertEnter * 2match TabWhitespace /\t/
+    au InsertLeave * 2match TabWhitespace /\t/
+    au BufWinEnter * 2match TabWhitespace /\t/
+
 " Highlight trailing whitespace (with support for buffer and
 "   colorscheme matching)
 " Also note that it won't highlight trailing whitespace on
@@ -237,12 +243,6 @@
     au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
     au InsertLeave * match ExtraWhitespace /\s\+$/
     au BufWinEnter * match ExtraWhitespace /\s\+$/
-
-" Highlights related to tabs
-    au ColorScheme * highlight TabWhitespace ctermbg=black guibg=#101010
-    au InsertEnter * match TabWhitespace /\t/
-    au InsertLeave * match TabWhitespace /\t/
-    au BufWinEnter * match TabWhitespace /\t/
 
 " Turn on column 80 highlighting and textwidth 0 for all buffers by default
     set colorcolumn=80
