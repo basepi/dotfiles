@@ -16,9 +16,10 @@
 import os
 import glob
 import shutil
+import sys
 
 
-def installdotfiles():
+def installdotfiles(noprompt=False):
     'Script to install dotfiles, including user interaction in install process'
 
     # Introduction and warnings
@@ -27,15 +28,18 @@ def installdotfiles():
           "extension, and existing .old files may be overwritten!")
     print("Please see disclaimer in source code before using this script.")
 
-    # Inform user of destination, ask for permission
-    response = input('\nWill install via symlinks in `~/`, continue? (y/n) ')
-    if str.lower(response) != 'y':
-        print('Aborting...')
-        exit()
+    if not noprompt:
+        # Inform user of destination, ask for permission
+        response = input('\nWill install via symlinks in `~/`, continue? (y/n) ')
+        if str.lower(response) != 'y':
+            print('Aborting...')
+            exit()
 
     # Ask user to install all or pick and choose
     possibilities = glob.glob('*')
-    response = input('Install all? (y/n) ')
+    response = 'y'
+    if not noprompt:
+        response = input('Install all? (y/n) ')
     if str.lower(response) == 'y':
         modules = [f for f in possibilities if os.path.isdir(f)]
     else:
@@ -85,6 +89,9 @@ def move_to_dot_old(path):
 
 if __name__ == '__main__':
     try:
-        installdotfiles()
+        if len(sys.argv) > 1 and sys.argv[1] == '-y':
+            installdotfiles(noprompt=True)
+        else:
+            installdotfiles()
     except KeyboardInterrupt:
         print('Aborting...')
