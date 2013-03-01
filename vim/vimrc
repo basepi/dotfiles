@@ -509,7 +509,7 @@
 """"""""""""""""""""""""""""""
 " Set up context-sensitive completion
     au FileType python set omnifunc=pythoncomplete#Complete
-    let g:SuperTabDefaultCompletionType = "context"
+    "let g:SuperTabDefaultCompletionType = "context"
 
 " Enable menu and pydoc preview
     set completeopt=menuone,longest,preview
