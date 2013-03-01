@@ -553,6 +553,13 @@ EOF
     let g:Powerline_stl_path_style = 'short'
 
 
+""""""""""""""""""""""""""""""
+" => YankRing plugin
+""""""""""""""""""""""""""""""
+" Map <leader>yr to open a NERDTree buffer
+    nnoremap <silent> <leader>yr :YRShow<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
