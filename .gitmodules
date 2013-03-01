@@ -61,3 +61,6 @@
 [submodule "vim/vim/bundle/minibufexpl"]
 	path = vim/vim/bundle/minibufexpl
 	url = git://github.com/fholgado/minibufexpl.vim.git
+[submodule "vim/vim/bundle/yankring"]
+	path = vim/vim/bundle/yankring
+	url = git://github.com/vim-scripts/YankRing.vim.git
