@@ -177,7 +177,7 @@
 " Set minimum winwidth
     set winwidth=80
 " Set minimum winheight
-    set winheight=40
+    "set winheight=40
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
