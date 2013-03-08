@@ -359,7 +359,8 @@
 " Map visual-mode spacebar to center screen on cursor
     nnoremap <space> zz
 
-" Map normal-, visual-, and insert-mode F1 to Esc to avoid accidental help calls
+" Map normal-, visual-, and insert-mode F1 to Esc to avoid accidental help
+" calls
     noremap <F1> <Esc>
     inoremap <F1> <Esc>
 
