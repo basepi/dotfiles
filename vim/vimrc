@@ -371,13 +371,15 @@
     nnoremap <leader>bb :cd ..<cr>
 
 " Remove the Windows ^M - when the encodings gets messed up
-    nnoremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+    nnoremap <leader>cr mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Move a line of text using CTRL+SHIFT+[jk]
-    nnoremap <C-n> mz:m+<cr>`z
-    nnoremap <C-m> mz:m-2<cr>`z
-    vnoremap <C-n> :m'>+<cr>`<my`>mzgv`yo`z
-    vnoremap <C-m> :m'<-2<cr>`>my`<mzgv`yo`z
+" (Used to be <C-m> and <C-n>, but apparently <C-m> and <CR> are equivalent to
+" vim)
+    nnoremap <leader>m mz:m+<cr>`z
+    nnoremap <leader>M mz:m-2<cr>`z
+    vnoremap <leader>m :m'>+<cr>`<my`>mzgv`yo`z
+    vnoremap <leader>M :m'<-2<cr>`>my`<mzgv`yo`z
 
 " Easy exit from insert mode using jj (often not available in
 "   vim emulation plugins in IDEs, etc, so you might not want
