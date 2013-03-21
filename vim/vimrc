@@ -454,6 +454,13 @@
 
 
 """"""""""""""""""""""""""""""
+" => Syntastic plugin
+""""""""""""""""""""""""""""""
+" Check syntax on open
+    let g:syntastic_check_on_open=1
+
+
+""""""""""""""""""""""""""""""
 " => NERDTree plugin
 """"""""""""""""""""""""""""""
 " Map <leader>f to open a NERDTree buffer
