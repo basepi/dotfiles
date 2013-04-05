@@ -44,3 +44,8 @@
 !zsh/zsh/includes/*
 !zsh/zsh/other/
 !zsh/zsh/other/*
+
+# Misc
+!misc/
+!misc/config/
+!misc/config/*
