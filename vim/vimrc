@@ -84,8 +84,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 line scroll-offset
-    set scrolloff=3
+" Set 2 line scroll-offset
+    set scrolloff=2
 " Set 10 character side scroll-offset
     "set sidescrolloff=10  " Jumps too much, can't read earlier in line
 
