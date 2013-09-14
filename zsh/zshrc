@@ -18,6 +18,7 @@ DOTFILES=(
     key-bindings
     platform
     prompt
+    ruby
 )
 for file in $DOTFILES; do
     file=$ZSH/includes/$file
