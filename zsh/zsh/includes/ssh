@@ -1,8 +1,0 @@
-# SSH
-
-# SSH shortcutting -- need to change this to the hosts file
-#   Might be undercutting the safety measure of changing my default ssh port by
-#   posting these, but at least it still wards off some automated attacks, and
-#   with the other security measures I have in place, I'm just not worried
-#   about it. =P
-alias ssh-cmyers-ports="ssh -L 8000:127.0.0.1:8000 -L 3310:127.0.0.1:3306 -L 38923:127.0.0.1:2812 cmyers@server.cmyers.net"
