@@ -460,6 +460,13 @@ endif
 
 
 """"""""""""""""""""""""""""""
+" => Tagbar plugin
+""""""""""""""""""""""""""""""
+" Toggle tagbar
+    nmap <leader>t :TagbarToggle<CR>
+
+
+""""""""""""""""""""""""""""""
 " => Syntastic plugin
 """"""""""""""""""""""""""""""
 " Check syntax on open
