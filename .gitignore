@@ -27,8 +27,8 @@
 # Git
 !git/
 !git/*
-!git/git_template/
-!git/git_template/*
+!git/git_template/hooks/
+!git/git_template/hooks/*
 
 # Mercurial (hg)
 !hg/
