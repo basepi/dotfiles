@@ -80,6 +80,11 @@
 " Set encoding
     set encoding=utf-8
 
+" Jump to last position when re-opening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -251,6 +256,7 @@
 " Set textwidth for certain filetypes
     au FileType tex set textwidth=79
     au FileType text set textwidth=79
+    au FileType markdown set textwidth=79
 " Modify column highlighting for specified filetypes on BufEnter
     au BufEnter COMMIT_EDITMSG set colorcolumn=73
 " Handle textwidth for various filetypes (used for autoformatting, gq)
@@ -457,10 +463,17 @@
 " => Syntastic plugin
 """"""""""""""""""""""""""""""
 " Check syntax on open
-    let g:syntastic_check_on_open=0
-    let g:syntastic_always_populate_loc_list=0
-    " let g:syntastic_python_checkers = ['flake8']
-    let g:syntastic_python_checkers = []
+    let g:syntastic_check_on_open = 0
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_enable_highlighting = 0
+    let g:syntastic_error_symbol = 'E'
+    let g:syntastic_style_error_symbol = 'S'
+    let g:syntastic_warning_symbol = 'W'
+    let g:syntastic_style_warning_symbol = 'S'
+    let g:syntastic_always_populate_loc_list = 1
+    nmap <silent> <leader>y :SyntasticCheck<cr>
+
+    let g:syntastic_python_checkers = ['pylint']
     let g:syntastic_tex_checkers = []
 
 
