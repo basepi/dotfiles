@@ -29,3 +29,6 @@ alias sl='ls -h --color=always' # In case of screw-ups
 # Sometimes I work on vi-only systems -- this keeps me sane on the switch
 alias vi="vim"
 
+# LXC Parasite host management
+alias lxcup='VBoxManage startvm "LXC Host" --type headless'
+alias lxcdown='VBoxManage controlvm "LXC Host" poweroff'
