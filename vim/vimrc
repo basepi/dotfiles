@@ -181,7 +181,7 @@ endif
     set splitright
 
 " Set minimum winwidth
-    set winwidth=80
+"    set winwidth=80
 " Set minimum winheight
     "set winheight=40
 
@@ -463,7 +463,15 @@ endif
 " => Tagbar plugin
 """"""""""""""""""""""""""""""
 " Toggle tagbar
-    nmap <leader>t :TagbarToggle<CR>
+    nmap <silent> <leader>tt :TagbarToggle<CR>
+
+" Tagbar config
+    let g:tagbar_width = 40
+
+" Automatically open tagbar for supported files
+    autocmd VimEnter * nested :call tagbar#autoopen(1)
+    autocmd FileType * nested :call tagbar#autoopen(0)
+    autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 
 """"""""""""""""""""""""""""""
