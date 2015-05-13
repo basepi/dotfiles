@@ -29,6 +29,11 @@ ZSH_GIT_PROMPT_CLEAN=""
 
 ZSH_VIM_PROMPT=" ${d}[${green}NORMAL${d}]"
 
+# Set it initially
+PROMPT='
+${d}[${name}${d}@${host}${d}] [${green}$(collapse_pwd)${d}]$(git_prompt_info) ${${KEYMAP/vicmd/$ZSH_VIM_PROMPT}/(main|viins)/}
+${d}$(virtualenv_info)$(prompt_char) ${white}'
+
 function zle-line-init zle-keymap-select {
     PROMPT='
 ${d}[${name}${d}@${host}${d}] [${green}$(collapse_pwd)${d}]$(git_prompt_info) ${${KEYMAP/vicmd/$ZSH_VIM_PROMPT}/(main|viins)/}
