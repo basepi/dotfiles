@@ -108,7 +108,19 @@ endif
     set wildignore+=*.o,*.obj,.git,*.rbc,*~
 
 " Turn off line numbers
-    set nonumber
+"    set nonumber
+
+" Turn on relative line numbers
+     set number
+     set relativenumber
+
+" Relative line numbers only when relevant
+    autocmd InsertEnter * silent! :set norelativenumber
+    autocmd InsertLeave,BufNewFile,VimEnter * silent! :set relativenumber
+
+" Toggle relative line numbers when necessary
+    nnoremap <silent><leader>r :set rnu!<cr>
+
 " Always show current cursor position
     set ruler
 
