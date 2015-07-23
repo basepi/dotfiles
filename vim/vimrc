@@ -173,7 +173,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always keep windows at equal size except for winwidth/winheight of current
 " window
-    set equalalways
+"    set equalalways
 
 " When windows are split, new window appears on bottom
     set splitbelow
