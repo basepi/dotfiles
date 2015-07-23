@@ -488,7 +488,7 @@ endif
 " => vim-gitgutter plugin
 """"""""""""""""""""""""""""""
 " Turn on gutter by default
-    let g:gitgutter_sign_column_always = 1
+    "let g:gitgutter_sign_column_always = 1
 
 
 """"""""""""""""""""""""""""""
