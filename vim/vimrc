@@ -81,9 +81,12 @@
     set encoding=utf-8
 
 " Jump to last position when re-opening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Make vim save and load the folding of the document each time it loads
+" Also places the cursor in the last place that it was left
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -288,6 +291,7 @@ endif
     au BufNewFile,BufRead *.md set filetype=markdown
     au BufNewFile,BufRead *.tex set filetype=tex
     au BufNewFile,BufRead *.grm.sx set filetype=racket
+    "au BufNewFile,BufRead COMMIT_EDITMSG set filetype=diff
 
 " Set shell
     if MySys() != "windows"
