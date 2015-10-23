@@ -85,8 +85,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " Make vim save and load the folding of the document each time it loads
 " Also places the cursor in the last place that it was left
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -359,9 +359,9 @@ au BufWinEnter * silent loadview
 
 " Tab configuration
     nnoremap <leader>tn :tabnew<cr>
-    nnoremap <leader>te :tabedit 
+    nnoremap <leader>te :tabedit
     nnoremap <leader>tc :tabclose<cr>
-    nnoremap <leader>tm :tabmove 
+    nnoremap <leader>tm :tabmove
 
 " When pressing <leader>cd switch to the directory of the open buffer
     nnoremap <leader>cd :cd %:p:h<cr>
