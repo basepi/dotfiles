@@ -27,7 +27,7 @@ export HAVE_DOT=YES
 export SHORT_NAMES=YES
 
 # PATH (yes, it's messy)
-export PATH=/usr/local/bin:/usr/local/include:/usr/local/lib:/usr/bin:/usr/include:/usr/lib:/usr/texbin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/Users/basepi/bin:/Applications/Doxygen.app/Contents/Resources:/Applications/Doxygen.app/Contents/MacOS:/Applications/Graphviz.app/Contents/MacOS:/sbin:/Applications/Racket\ v5.3.3/bin:/usr/local/Cellar/gems/1.9/bin
+export PATH=/usr/local/bin:/usr/local/include:/usr/local/lib:/usr/bin:/usr/include:/usr/lib:/Library/TeX/texbin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/Users/basepi/bin:/Applications/Doxygen.app/Contents/Resources:/Applications/Doxygen.app/Contents/MacOS:/Applications/Graphviz.app/Contents/MacOS:/sbin:/Applications/Racket\ v5.3.3/bin:/usr/local/Cellar/gems/1.9/bin
 
 # GREP
 export GREP_OPTIONS='--color=auto'
