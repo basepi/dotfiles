@@ -20,6 +20,7 @@
                 <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
                 <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
                 <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+                <autogen>--KeyToKey-- KeyCode::B, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
 
                 <autogen>--KeyToKey-- KeyCode::Y,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
                 <autogen>--KeyToKey-- KeyCode::U,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
@@ -54,10 +55,25 @@
                     KeyCode::TAB
                 </autogen>
             </item>
+			<item>
+                <name>Remap Held Tab to CMD</name>
+
+                <identifier>steve_losh.held_tab_to_cmd</identifier>
+
+                <autogen>
+                    --KeyOverlaidModifier--
+                    KeyCode::TAB,
+                    ModifierFlag::NONE,
+
+                    KeyCode::COMMAND_L,
+
+                    KeyCode::TAB
+                </autogen>
+            </item>
             <item>
                 <name>Remap F19 to Hyper if held, CMD-SPACE if pressed</name>
                 <appendix>OS X doesn't have a Hyper. This maps F19 to Control + Shift + Option + Command.</appendix>
-                <appendix>You can use this key in your own custom keyboard shortcuts you create in apps.</appendix>
+                <appendix>If you don't hold it down, it will send cmd-space for spotlight search</appendix>
 
                 <identifier>steve_losh.left_control_to_hyper</identifier>
 
@@ -66,7 +82,7 @@
                     KeyCode::F19,
 
                     KeyCode::COMMAND_L,
-                    ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+                    ModifierFlag::OPTION_L | ModifierFlag::SHIFT_R | ModifierFlag::CONTROL_L,
 
                     KeyCode::SPACE,
                     ModifierFlag::COMMAND_L
