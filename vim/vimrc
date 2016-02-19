@@ -521,7 +521,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => NERDTree plugin
 """"""""""""""""""""""""""""""
 " Map <leader>f to open a NERDTree buffer
-    nnoremap <silent> <leader>f :NERDTree<CR>
+    nnoremap <silent> <leader>f :NERDTreeToggle<CR>
+
+" Close vim if nerdtree is the last window open
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 """"""""""""""""""""""""""""""
