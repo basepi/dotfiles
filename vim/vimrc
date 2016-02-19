@@ -484,7 +484,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
     let g:tagbar_width = 40
 
 " Automatically open tagbar for supported files
-    autocmd VimEnter * nested :call tagbar#autoopen(1)
+"    autocmd VimEnter * nested :call tagbar#autoopen(1)
 
 
 """"""""""""""""""""""""""""""
