@@ -551,7 +551,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => CtrlP plugin
 """"""""""""""""""""""""""""""
 " Set mapping and command
-    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_map = '<leader>.'
     let g:ctrlp_cmd = 'CtrlP'
 
 " Set method for finding local directory
@@ -598,13 +598,6 @@ EOF
 """"""""""""""""""""""""""""""
 " Bind key to search for what's under the cursor in Ack
     nnoremap <leader>a <Esc>:Ack!
-
-
-""""""""""""""""""""""""""""""
-" => Rope plugin
-""""""""""""""""""""""""""""""
-" Map go-to-definition in Rope
-    nnoremap <leader>. :RopeGotoDefinition<CR>
 
 
 """"""""""""""""""""""""""""""
