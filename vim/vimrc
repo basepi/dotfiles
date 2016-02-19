@@ -336,9 +336,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Smart way to move between windows
     nnoremap <C-j> <C-W>j
     nnoremap <C-k> <C-W>k
-    " Not currently using these -- have them bound to buffer switching
-    "nnoremap <C-h> <C-W>h
-    "nnoremap <C-l> <C-W>l
+    nnoremap <C-h> <C-W>h
+    nnoremap <C-l> <C-W>l
 
 " Close the current buffer
     nnoremap <leader>bd :Bclose<cr>
@@ -348,8 +347,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
     nnoremap <leader>baaa :1,300 bd!<cr>
 
 " Buffer switching
-    nnoremap <C-l> :bn<cr>
-    nnoremap <C-h> :bp<cr>
+    nnoremap <S-l> :bn<cr>
+    nnoremap <S-h> :bp<cr>
     nnoremap <right> :bn<cr>
     nnoremap <left> :bp<cr>
 
