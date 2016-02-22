@@ -67,3 +67,6 @@
 [submodule "vim/vim/bundle/solarized"]
 	path = vim/vim/bundle/solarized
 	url = git://github.com/thomwiggers/vim-colors-solarized.git
+[submodule "vim/vim/bundle/vim-easymotion"]
+	path = vim/vim/bundle/vim-easymotion
+	url = git://github.com/easymotion/vim-easymotion
