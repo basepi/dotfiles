@@ -79,3 +79,6 @@
 [submodule "vim/vim/bundle/incsearch-fuzzy.vim"]
 	path = vim/vim/bundle/incsearch-fuzzy.vim
 	url = git://github.com/haya14busa/incsearch-fuzzy.vim
+[submodule "vim/vim/bundle/incsearch-easymotion.vim"]
+	path = vim/vim/bundle/incsearch-easymotion.vim
+	url = git://github.com/haya14busa/incsearch-easymotion.vim
