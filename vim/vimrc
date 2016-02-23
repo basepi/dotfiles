@@ -624,6 +624,47 @@ EOF
     nnoremap <silent> <leader>yr :YRShow<CR>
 
 
+""""""""""""""""""""""""""""""
+" => EasyMotion plugin
+""""""""""""""""""""""""""""""
+" Turn on smartcase
+    let g:EasyMotion_smartcase = 1
+
+" Use ; instead of <leader><leader> for prefix
+    nmap ; <Plug>(easymotion-prefix)
+
+" Make ;f bidirectional, and cross-window in normal mode
+    map ;f <Plug>(easymotion-bd-f)
+    nmap ;f <Plug>(easymotion-overwin-f)
+
+" Make ;j and ;k bidirectional, and cross-window in normal mode
+    map ;j <Plug>(easymotion-bd-jk)
+    map ;k <Plug>(easymotion-bd-jk)
+    nmap ;j <Plug>(easymotion-overwin-line)
+    nmap ;k <Plug>(easymotion-overwin-line)
+
+" Use ;l and ;h to search on your line
+    map ;l <Plug>(easymotion-lineforward)
+    map ;h <Plug>(easymotion-linebackward)
+
+" Make ;w bidirectional, and cross-window in normal mode
+    map ;w <Plug>(easymotion-bd-w)
+    nmap ;w <Plug>(easymotion-overwin-w)
+
+" Use ;s for a bidirectional, two-letter search like ;f
+    map ;s <Plug>(easymotion-s2)
+
+" Use easymotion incremental search
+" Gif config
+    map  / <Plug>(easymotion-sn)
+    omap / <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+    map  n <Plug>(easymotion-next)
+    map  N <Plug>(easymotion-prev)
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
