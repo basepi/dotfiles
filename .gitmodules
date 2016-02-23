@@ -73,3 +73,6 @@
 [submodule "vim/vim/bundle/vim-repeat"]
 	path = vim/vim/bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat
+[submodule "vim/vim/bundle/incsearch.vim"]
+	path = vim/vim/bundle/incsearch.vim
+	url = git://github.com/haya14busa/incsearch.vim
