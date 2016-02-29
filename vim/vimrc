@@ -218,6 +218,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
         set directory=~/.vim/backup
     endif
 
+" Don't backup crontabs
+    set backupskip=/tmp/*,/private/tmp/*
+
 " Set undo directory and enable undo file
     if MySys() == "windows"
         set undodir=C:\\vim\\vimfiles\\undodir
