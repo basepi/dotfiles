@@ -2,5 +2,6 @@ vim/vim/undodir
 vim/vim/backup
 vim/vim/view
 vim/vim/plugged
+vim/vim/autoload
 weechat/weechat/logs
 weechat/weechat/*.log
