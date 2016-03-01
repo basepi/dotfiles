@@ -48,6 +48,10 @@
     execute pathogen#infect()
     execute pathogen#helptags()
 
+" Plugins via plug.vim
+    call plug#begin('~/.vim/plugged')
+        Plug 'plasticboy/vim-markdown'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
