@@ -136,11 +136,14 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Set 10 character side scroll-offset
     "set sidescrolloff=10  " Jumps too much, can't read earlier in line
 
-" Status line
+" Status line (see Airline Plugin section)
     " Always show the statusline
     set laststatus=2
-    " Format the statusline
+    " Format the statusline (ignored, because of airline plugin)
     set statusline=\ %{HasTabs()}%{HasPaste()}\ [%F%m%r%h]\ %w\ [Line:\ %l/%L:%c]\ [%{fugitive#head()}]
+
+" Airline Plugin (status line)
+    let g:airline_powerline_fonts = 1
 
 " Turn on wildmenu
     set wildmenu
@@ -492,6 +495,18 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 
 """"""""""""""""""""""""""""""
+" => Python
+""""""""""""""""""""""""""""""
+" Save and execute python3 file being edited with <leader>e:
+    nnoremap <leader>e :w<CR>:!/usr/bin/env python3 % <CR>
+" Save and execute python2 file being edited with <leader><Shift+e>:
+    nnoremap <leader><S-e> :w<CR>:!/usr/bin/env python % <CR>
+
+" Disable smartindent for python files (fixes # jumping to beginning of line)
+    au FileType python  set nosmartindent
+
+
+""""""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""
 " Define directories for vimgrep to skip
@@ -505,15 +520,13 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 
 """"""""""""""""""""""""""""""
-" => Python
+" => Airline plugin
 """"""""""""""""""""""""""""""
-" Save and execute python3 file being edited with <leader>e:
-    nnoremap <leader>e :w<CR>:!/usr/bin/env python3 % <CR>
-" Save and execute python2 file being edited with <leader><Shift+e>:
-    nnoremap <leader><S-e> :w<CR>:!/usr/bin/env python % <CR>
+" Use powerline fonts (needs patched font, Inconsolata for Powerline)
+    let g:airline_powerline_fonts = 1
 
-" Disable smartindent for python files (fixes # jumping to beginning of line)
-    au FileType python  set nosmartindent
+" Add tabs to the normal section A
+    let g:airline_section_a = '%#__accent_bold#%{airline#util#wrap(airline#parts#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#crypt(),0)}%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append(HasTabs(),0)}%{airline#util#append("",0)}%{airline#util#append(airline#parts#iminsert(),0)}'
 
 
 """"""""""""""""""""""""""""""
@@ -813,21 +826,14 @@ endfunction
 
 " Check for paste mode
 function! HasPaste()
-    if &paste
-        return '[PASTE MODE]'
-    else
-        return ''
-    endif
+    return &paste ? '[PASTE]' : ''
 endfunction
 
 " Check for tabs (noexpandtab mode)
 function! HasTabs()
-    if &expandtab
-        return ''
-    else
-        return '[TABS] '
-    endif
+    return &expandtab ? '' : 'TABS'
 endfunction
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Possible alternate configuration stuff
