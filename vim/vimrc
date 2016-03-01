@@ -58,20 +58,13 @@
         Plug 'vim-airline/vim-airline-themes'
         Plug 'thomwiggers/vim-colors-solarized'
 
-        " Project management
+        " Project navigation
         Plug 'kien/ctrlp.vim'
         Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
         " Buffer management
         Plug 'fholgado/minibufexpl.vim'
         Plug 'vim-scripts/bufexplorer.zip'
-
-        " Code navigation/manipulation
-        Plug 'majutsushi/tagbar'
-        Plug 'vim-scripts/TaskList.vim'
-
-        " Tab completion
-        Plug 'ervandew/SuperTab'
 
         " Search
         Plug 'haya14busa/incsearch-easymotion.vim'
@@ -108,6 +101,15 @@
 
         " Clipboard history
         Plug 'vim-scripts/YankRing.vim'
+
+        " Code navigation
+        Plug 'majutsushi/tagbar'
+
+        " Navigate TODO and similar tags
+        Plug 'vim-scripts/TaskList.vim'
+
+        " Tab completion
+        Plug 'ervandew/SuperTab'
 
     call plug#end()
 
