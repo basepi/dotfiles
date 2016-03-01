@@ -82,6 +82,9 @@
         Plug 'airblade/vim-gitgutter'
         Plug 'tpope/vim-repeat'
         Plug 'vim-scripts/YankRing.vim'
+        Plug 'vim-airline/vim-airline'
+        Plug 'vim-airline/vim-airline-themes'
+        Plug 'jmcantrell/vim-virtualenv'
     call plug#end()
 
 
