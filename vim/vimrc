@@ -44,13 +44,38 @@
     let maplocalleader = ","
     let g:maplocalleader = ","
 
-" Initialize Pathogen
-    execute pathogen#infect()
-    execute pathogen#helptags()
-
 " Plugins via plug.vim
     call plug#begin('~/.vim/plugged')
         Plug 'plasticboy/vim-markdown'
+        Plug 'mileszs/ack.vim'
+        Plug 'vim-scripts/bufexplorer.zip'
+        Plug 'basepi/vim-conque'
+        Plug 'kien/ctrlp.vim'
+        Plug 'tpope/vim-fugitive'
+        Plug 'tpope/vim-git'
+        Plug 'sjl/gundo.vim'
+        Plug 'haya14busa/incsearch-easymotion.vim'
+        Plug 'haya14busa/incsearch-fuzzy.vim'
+        Plug 'haya14busa/incsearch.vim'
+        Plug 'fholgado/minibufexpl.vim'
+        Plug 'scrooloose/nerdtree'
+        Plug 'vim-scripts/pep8'
+        Plug 'fs111/pydoc.vim'
+        Plug 'alfredodeza/pytest.vim'
+        Plug 'wlangstroth/vim-racket'
+        Plug 'saltstack/salt-vim'
+        Plug 'thomwiggers/vim-colors-solarized'
+        Plug 'ervandew/supertab'
+        Plug 'tpope/vim-surround'
+        Plug 'scrooloose/syntastic'
+        Plug 'majutsushi/tagbar'
+        Plug 'vim-scripts/TaskList.vim'
+        Plug 'SirVer/ultisnips'
+        Plug 'easymotion/vim-easymotion'
+        Plug 'airblade/vim-gitgutter'
+        Plug 'tpope/vim-repeat'
+        Plug 'vim-scripts/YankRing.vim'
+    call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
