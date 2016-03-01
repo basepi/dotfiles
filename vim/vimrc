@@ -53,38 +53,62 @@
         autocmd VimEnter * PlugInstall | source $MYVIMRC
     endif
     call plug#begin('~/.vim/plugged')
-        Plug 'plasticboy/vim-markdown'
-        Plug 'mileszs/ack.vim'
-        Plug 'vim-scripts/bufexplorer.zip'
-        Plug 'basepi/vim-conque'
+        " Appearance and statusline
+        Plug 'vim-airline/vim-airline'
+        Plug 'vim-airline/vim-airline-themes'
+        Plug 'thomwiggers/vim-colors-solarized'
+
+        " Project management
         Plug 'kien/ctrlp.vim'
-        Plug 'tpope/vim-fugitive'
-        Plug 'tpope/vim-git'
-        Plug 'sjl/gundo.vim'
+        Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+        " Buffer management
+        Plug 'fholgado/minibufexpl.vim'
+        Plug 'vim-scripts/bufexplorer.zip'
+
+        " Code navigation/manipulation
+        Plug 'majutsushi/tagbar'
+        Plug 'vim-scripts/TaskList.vim'
+
+        " Tab completion
+        Plug 'ervandew/SuperTab'
+
+        " Search
         Plug 'haya14busa/incsearch-easymotion.vim'
         Plug 'haya14busa/incsearch-fuzzy.vim'
         Plug 'haya14busa/incsearch.vim'
-        Plug 'fholgado/minibufexpl.vim'
-        Plug 'scrooloose/nerdtree'
-        Plug 'vim-scripts/pep8'
-        Plug 'fs111/pydoc.vim'
-        Plug 'alfredodeza/pytest.vim'
-        Plug 'wlangstroth/vim-racket'
-        Plug 'saltstack/salt-vim'
-        Plug 'thomwiggers/vim-colors-solarized'
-        Plug 'ervandew/supertab'
-        Plug 'tpope/vim-surround'
-        Plug 'scrooloose/syntastic'
-        Plug 'majutsushi/tagbar'
-        Plug 'vim-scripts/TaskList.vim'
-        Plug 'SirVer/ultisnips'
-        Plug 'easymotion/vim-easymotion'
+
+        " Git
+        Plug 'tpope/vim-fugitive'
+        Plug 'tpope/vim-git'
         Plug 'airblade/vim-gitgutter'
+
+        " Python
+        Plug 'vim-scripts/pep8', { 'for': 'python' }
+        Plug 'alfredodeza/pytest.vim', { 'for': 'python' }
+        Plug 'fs111/pydoc.vim', { 'for': 'python' }
+        Plug 'jmcantrell/vim-virtualenv', { 'for': 'python' }
+
+        " Other filetype stuff
+        Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
+        Plug 'saltstack/salt-vim', { 'for': 'sls' }
+        Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+
+        " Repeat plugin operations with .
         Plug 'tpope/vim-repeat'
+
+        " Enhanced vim motions
+        Plug 'easymotion/vim-easymotion'
+
+        " Browse undo tree
+        Plug 'sjl/gundo.vim'
+
+        " Lint and syntax checking
+        Plug 'scrooloose/syntastic'
+
+        " Clipboard history
         Plug 'vim-scripts/YankRing.vim'
-        Plug 'vim-airline/vim-airline'
-        Plug 'vim-airline/vim-airline-themes'
-        Plug 'jmcantrell/vim-virtualenv'
+
     call plug#end()
 
 
@@ -95,6 +119,7 @@
     set history=700
 
 " Enable filetype plugin
+    filetype plugin on
     filetype plugin indent on
 
 " Set to auto read when a file is changed from the outside
