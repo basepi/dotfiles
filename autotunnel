@@ -30,4 +30,6 @@ createTunnel() {
 if [[ $? -ne 0 ]]; then
     echo Creating new tunnel connection
     createTunnel
+else
+    echo Nothing to do, tunnel operational
 fi
