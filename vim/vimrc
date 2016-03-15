@@ -81,6 +81,7 @@
         Plug 'alfredodeza/pytest.vim', { 'for': 'python' }
         Plug 'fs111/pydoc.vim', { 'for': 'python' }
         Plug 'jmcantrell/vim-virtualenv', { 'for': 'python' }
+        Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
         " Other filetype stuff
         Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
@@ -110,6 +111,9 @@
 
         " Tab completion
         Plug 'ervandew/SuperTab'
+
+        " Manage tags/quotes/brackets dynamically
+        Plug 'tpope/vim-surround'
 
     call plug#end()
 
@@ -661,7 +665,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => SuperTab plugin (and other tab-completion-related-stuff)
 """"""""""""""""""""""""""""""
 " Set up context-sensitive completion
-    au FileType python set omnifunc=pythoncomplete#Complete
+    au FileType python set omnifunc=jedi#completions
     "let g:SuperTabDefaultCompletionType = "context"
 
 " Enable menu and pydoc preview
