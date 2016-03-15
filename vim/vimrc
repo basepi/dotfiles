@@ -342,7 +342,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
     au BufWinEnter * match ExtraWhitespace /\s\+$/
 
 " Turn on column 80 highlighting and textwidth 0 for all buffers by default
-    set colorcolumn=80
+    set colorcolumn=80,90
     set textwidth=0
 " Set textwidth for certain filetypes
     au FileType tex set textwidth=79
