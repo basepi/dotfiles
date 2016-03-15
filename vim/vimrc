@@ -689,7 +689,7 @@ EOF
 """"""""""""""""""""""""""""""
 " => PyDoc plugin
 """"""""""""""""""""""""""""""
-" Map go-to-definition in Rope
+" Specify pydoc executable
     let g:pydoc_cmd = '/usr/bin/pydoc'
 
 
@@ -785,6 +785,14 @@ EOF
     map z/ <Plug>(incsearch-fuzzyspell-/)
     map z? <Plug>(incsearch-fuzzyspell-?)
     map zg/ <Plug>(incsearch-fuzzyspell-stay)
+
+
+""""""""""""""""""""""""""""""
+" => Pytest plugin
+""""""""""""""""""""""""""""""
+" Bind a key for quickly running pytest on the current file
+    map <leader>z :Pytest file<CR>
+    map <leader>zx :Pytest file verbose<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
