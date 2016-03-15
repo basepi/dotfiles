@@ -63,7 +63,6 @@
         Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
         " Buffer management
-        Plug 'fholgado/minibufexpl.vim'
         Plug 'vim-scripts/bufexplorer.zip'
 
         " Search
@@ -173,9 +172,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
     " Format the statusline (ignored, because of airline plugin)
     set statusline=\ %{HasTabs()}%{HasPaste()}\ [%F%m%r%h]\ %w\ [Line:\ %l/%L:%c]\ [%{fugitive#head()}]
 
-" Airline Plugin (status line)
-    let g:airline_powerline_fonts = 1
-
 " Turn on wildmenu
     set wildmenu
 " Setup tab completion modes
@@ -208,7 +204,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " Allow hiding buffers even though they contain modifications
 " which have not yet been written back to the associated file
-    set hid
+    set hidden
 
 " Set backspace config
     " Allow backspacing over everything in insert mode
@@ -558,6 +554,12 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " Add tabs to the normal section A
     let g:airline_section_a = '%#__accent_bold#%{airline#util#wrap(airline#parts#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#crypt(),0)}%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append(HasTabs(),0)}%{airline#util#append("",0)}%{airline#util#append(airline#parts#iminsert(),0)}'
+
+" Enable the list of buffers
+    let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+    let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 """"""""""""""""""""""""""""""
