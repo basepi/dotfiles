@@ -344,6 +344,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
     au FileType tex set textwidth=79
     au FileType text set textwidth=79
     au FileType markdown set textwidth=79
+    au FileType rst set textwidth=79
 " Modify column highlighting for specified filetypes on BufEnter
     au BufEnter COMMIT_EDITMSG set colorcolumn=73
 " Handle textwidth for various filetypes (used for autoformatting, gq)
