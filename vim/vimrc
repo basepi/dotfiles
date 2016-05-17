@@ -353,6 +353,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Define FileTypes which use normal tab characters instead of spaces
     au FileType make set noexpandtab
 
+" Highlight line on which the cursor resides
+    set cursorline
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
