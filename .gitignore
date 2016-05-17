@@ -3,5 +3,6 @@ vim/vim/backup
 vim/vim/view
 vim/vim/plugged
 vim/vim/autoload
+vim/vim/.netrwhist
 weechat/weechat/logs
 weechat/weechat/*.log
