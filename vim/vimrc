@@ -674,6 +674,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
     au FileType python set omnifunc=jedi#completions
     "let g:SuperTabDefaultCompletionType = "context"
 
+" Don't automatically autocomplete on dots
+    let g:jedi#popup_on_dot = 0
+
 " Enable menu and pydoc preview
     set completeopt=menuone,longest,preview
 
