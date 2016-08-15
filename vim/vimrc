@@ -150,12 +150,12 @@
     set encoding=utf-8
 
 " Jump to last position when re-opening a file
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Make vim save and load the folding of the document each time it loads
 " Also places the cursor in the last place that it was left
-"au BufWinLeave * mkview
-"au BufWinEnter * silent loadview
+    "au BufWinLeave * mkview
+    "au BufWinEnter * silent loadview
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -483,6 +483,25 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 "   vim emulation plugins in IDEs, etc, so you might not want
 "   to get reliant on this.)
     " inoremap jj <Esc>
+
+" Set breakindent for when wrapping is on
+    set breakindent
+    set showbreak=••••
+
+" Toggle between wrap and no wrap with <leader>w
+    noremap <silent> <Leader>w :call ToggleWrap()<CR>
+    function ToggleWrap()
+      if &wrap
+        echo "Wrap OFF"
+        setlocal nowrap
+        set virtualedit=all
+      else
+        echo "Wrap ON"
+        setlocal wrap linebreak nolist
+        set virtualedit=
+        setlocal display+=lastline
+      endif
+    endfunction
 
 " Easily toggle between tabs and spaces
     nnoremap <F3> :set expandtab!<CR>
