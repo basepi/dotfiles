@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 2.0.1.
+# Recent settings file for Wireshark 2.0.4.
 #
 # This file is regenerated each time Wireshark is quit.
 # So be careful, if you want to make manual changes here.
@@ -7,6 +7,7 @@
 
 recent.capture_file: /Users/basepi/src/work/cve/test.ping.capture.pcapng
 recent.capture_file: /Users/basepi/src/work/cve/full.auth.plus.test.ping.pcapng
+recent.capture_file: /Users/cmyers/Downloads/findtheflag (1).pcapng
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
@@ -16,10 +17,10 @@ recent.capture_file: /Users/basepi/src/work/cve/full.auth.plus.test.ping.pcapng
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 160
-gui.geometry_main_y: 299
-gui.geometry_main_width: 960
-gui.geometry_main_height: 768
+gui.geometry_main_x: 0
+gui.geometry_main_y: 23
+gui.geometry_main_width: 2516
+gui.geometry_main_height: 1395
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
