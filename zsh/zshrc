@@ -24,3 +24,5 @@ for file in $DOTFILES; do
     file=$ZSH/includes/$file
     [[ -f $file ]] && source $file
 done
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
