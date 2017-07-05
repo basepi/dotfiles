@@ -6,3 +6,5 @@ vim/vim/autoload
 vim/vim/.netrwhist
 weechat/weechat/logs
 weechat/weechat/*.log
+misc/config/keybase
+misc/config/autostart
