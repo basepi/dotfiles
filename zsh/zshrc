@@ -26,3 +26,7 @@ for file in $DOTFILES; do
 done
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if type "keychain" > /dev/null; then
+    eval `keychain --agents ssh --eval id_rsa --clear`
+fi
