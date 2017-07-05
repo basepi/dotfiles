@@ -13,16 +13,22 @@
 # is offered. The user is advised to test the source code thoroughly before
 # relying on it. The user must assume the entire risk of using the source code.
 
+from __future__ import print_function
+
 import os
 import glob
 import shutil
 import sys
 
+try:
+    input = raw_input
+except NameError:
+    pass
+
 
 def installdotfiles(noprompt=False):
     'Script to install dotfiles, including user interaction in install process'
 
-    # Introduction and warnings
     print("Welcome to Colton's dotfile installation script!")
     print("Please note that existing files will be renamed with a .old",
           "extension, and existing .old files may be overwritten!")
@@ -31,16 +37,16 @@ def installdotfiles(noprompt=False):
     if not noprompt:
         # Inform user of destination, ask for permission
         response = input('\nWill install via symlinks in `~/`, continue? (y/n) ')
-        if str.lower(response) != 'y':
+        if response.lower() != 'y':
             print('Aborting...')
-            exit()
+            exit(1)
 
     # Ask user to install all or pick and choose
     possibilities = glob.glob('*')
     response = 'y'
     if not noprompt:
         response = input('Install all? (y/n) ')
-    if str.lower(response) == 'y':
+    if response.lower() == 'y':
         modules = [f for f in possibilities if os.path.isdir(f)]
     else:
         # Ask user which files to install, store those to install in `modules`
@@ -49,7 +55,7 @@ def installdotfiles(noprompt=False):
             if not os.path.isdir(f):
                 continue
             response = input('Install ' + f + '? (y/n) ')
-            if str.lower(response) == 'y':
+            if response.lower() == 'y':
                 modules.append(f)
 
     # Glob all the necessary files, excluding, ironically, dotfiles
