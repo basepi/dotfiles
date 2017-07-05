@@ -114,6 +114,9 @@
         " Manage tags/quotes/brackets dynamically
         Plug 'tpope/vim-surround'
 
+        " Move between vim/tmux splits seamlessly
+        Plug 'christoomey/vim-tmux-navigator'
+
     call plug#end()
 
 
