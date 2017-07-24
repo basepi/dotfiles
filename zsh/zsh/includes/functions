@@ -62,10 +62,18 @@ function vpndown() {
     /opt/cisco/anyconnect/bin/vpn disconnect
     sudo iptables -D INPUT -d 45.33.35.16/32 -p tcp -m tcp --dport 22 -j ACCEPT
     sudo iptables -D INPUT -d 45.33.35.16/32 -p udp -m udp --dport 60000:61000 -j ACCEPT
+    sudo iptables -D FORWARD -j DOCKER
+    sudo iptables -D FORWARD -j DOCKER-USER
+    sudo iptables -D FORWARD -j DOCKER-ISOLATION
 }
 
 function vpnup() {
     printf 'cmyers\n'"$1"'\ny\n' | /opt/cisco/anyconnect/bin/vpn -s connect asa-lehi.adobe.com
     sudo iptables -I INPUT 1 -d 45.33.35.16 -p udp --dport 60000:61000 -j ACCEPT
     sudo iptables -I INPUT 1 -d 45.33.35.16 -p tcp --dport 22 -j ACCEPT
+    sudo iptables -I FORWARD 1 -j DOCKER-ISOLATION
+    sudo iptables -I FORWARD 1 -j DOCKER-USER
+    sudo iptables -I FORWARD 1 -j DOCKER
+    sudo route add -net 172.17.0.0 netmask 255.255.0.0 docker0
+    sudo pkill docker && sudo ifconfig docker0 down && sudo service docker start
 }
