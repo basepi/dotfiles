@@ -19,6 +19,7 @@ export LANG=en_US.UTF-8
 
 # Editor settings
 export EDITOR=vim
+export VISUAL=vim
 export SVN_EDITOR=vim
 
 # Graphviz DOT stuff for Doxygen
