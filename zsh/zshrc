@@ -28,5 +28,6 @@ done
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 if type "keychain" > /dev/null; then
+    export KEYCHAIN=true
     eval `keychain --agents ssh,gpg --eval id_rsa D71F663F`
 fi

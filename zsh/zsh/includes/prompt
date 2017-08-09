@@ -5,6 +5,9 @@ function collapse_pwd {
 }
 
 function prompt_char {
+    if [ -z $KEYCHAIN ]; then
+        keychain --agents ssh,gpg --quiet id_rsa D71F663F
+    fi
     git branch >/dev/null 2>/dev/null && echo '±' && return
     hg root >/dev/null 2>/dev/null && echo '☿' && return
     echo '○'
