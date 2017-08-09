@@ -60,7 +60,7 @@
 
         " Project navigation
         Plug 'kien/ctrlp.vim'
-        Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+        Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind'] }
 
         " Buffer management
         Plug 'vim-scripts/bufexplorer.zip'
@@ -510,10 +510,10 @@
     nnoremap <F3> :set expandtab!<CR>
 
 " Easily toggle between line numbers and no line numbers
-    nnoremap <F4> :set number!<CR>
+    nnoremap <F4> :set number!<CR>:set relativenumber!<CR>
 
 " Toggle line numbers and fold column for easy copying via <F2>:
-    nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+    nnoremap <F2> :set nonumber!<CR>:set relativenumber!<CR>:GitGutterToggle<CR>:set foldcolumn=0<CR>
 
 " Move through vim's location lists (for example, syntastic errors)
     nnoremap <leader>j :lnext<CR>
@@ -635,10 +635,27 @@
 " => NERDTree plugin
 """"""""""""""""""""""""""""""
 " Map <leader>f to open a NERDTree buffer
-    nnoremap <silent> <leader>f :NERDTreeToggle<CR>
+    nnoremap <silent> <leader>f :call NERDTreeToggleInCurDir()<CR>
 
 " Close vim if nerdtree is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Close after opening a file
+    let NERDTreeQuitOnOpen = 1
+
+" Use NerdTreeFind by default for toggle
+    function! NERDTreeToggleInCurDir()
+        " If NERDTree is open in the current buffer
+        if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+            exe ":NERDTreeClose"
+        else
+            if (expand("%:t") != '')
+                exe ":NERDTreeFind"
+            else
+                exe ":NERDTreeToggle"
+            endif
+        endif
+    endfunction
 
 
 """"""""""""""""""""""""""""""
