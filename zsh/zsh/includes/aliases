@@ -35,3 +35,6 @@ alias fuck='sudo $(fc -ln -1)'
 # LXC Parasite host management
 alias lxcup='VBoxManage startvm "LXC Host" --type headless'
 alias lxcdown='VBoxManage controlvm "LXC Host" poweroff'
+
+alias mustafar='mosh basepi@mustafar.basepi.net -- /home/linuxbrew/.linuxbrew/bin/tmux new-session -A -D -s base'
+alias smustafar='ssh basepi@mustafar.basepi.net -t -- /home/linuxbrew/.linuxbrew/bin/tmux new-session -A -D -s base'
