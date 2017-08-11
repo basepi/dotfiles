@@ -36,7 +36,7 @@ ${d}$(virtualenv_info)$(prompt_char) ${white}'
 
 function zle-line-init zle-keymap-select {
     PROMPT='
-${d}[${name}${d}@${host}${d}] [${green}$(collapse_pwd)${d}]$(git_prompt_info) ${${KEYMAP/vicmd/$ZSH_VIM_PROMPT}/(main|viins)/}
+${d}[${tstamp}${d}] [${name}${d}@${host}${d}] [${green}$(collapse_pwd)${d}]$(git_prompt_info) ${${KEYMAP/vicmd/$ZSH_VIM_PROMPT}/(main|viins)/}
 ${d}$(virtualenv_info)$(prompt_char) ${white}'
     zle reset-prompt
 }
@@ -45,7 +45,6 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 
 setopt prompt_subst
-RPROMPT="${d}[${tstamp}${d}]${white}"
 
 if [ -z $KEYCHAIN ]; then
     precmd() { keychain --agents ssh,gpg --quiet --timeout 1440 id_rsa D71F663F }
