@@ -46,6 +46,6 @@ zle -N zle-keymap-select
 
 setopt prompt_subst
 
-if [ -z $KEYCHAIN ]; then
+if [ ${+KEYCHAIN} = 1 ]; then
     precmd() { keychain --agents ssh,gpg --quiet --timeout 1440 id_rsa D71F663F }
 fi
