@@ -26,6 +26,9 @@ alias l='ls -la --color=always'
 alias ll='ls -l --color=always'
 alias sl='ls -h --color=always' # In case of screw-ups
 
+# grep
+alias grep='grep --color=auto'
+
 # Sometimes I work on vi-only systems -- this keeps me sane on the switch
 alias vi="vim"
 
