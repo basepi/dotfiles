@@ -488,8 +488,10 @@
     " inoremap jj <Esc>
 
 " Set breakindent for when wrapping is on
+if has('patch-7.4.338')
     set breakindent
     set showbreak=••••
+end
 
 " Toggle between wrap and no wrap with <leader>w
     noremap <silent> <Leader>w :call ToggleWrap()<CR>
