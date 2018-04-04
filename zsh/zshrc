@@ -31,3 +31,5 @@ if type "keychain" > /dev/null; then
     export KEYCHAIN=true
     eval `keychain --agents ssh,gpg --eval --timeout 1440 id_rsa D71F663F`
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
