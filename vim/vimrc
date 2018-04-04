@@ -69,6 +69,8 @@
         "Plug 'haya14busa/incsearch-easymotion.vim'
         Plug 'haya14busa/incsearch-fuzzy.vim'
         Plug 'haya14busa/incsearch.vim'
+        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+        Plug 'Alok/notational-fzf-vim'
 
         " Git
         Plug 'tpope/vim-fugitive'
@@ -681,6 +683,22 @@ end
 
 
 """"""""""""""""""""""""""""""
+" => notational-fzf
+""""""""""""""""""""""""""""""
+" Search Path
+    let g:nv_search_paths = ['~/Dropbox/Notes']
+" String. Set to '' (the empty string) if you don't want an extension appended by default.
+" Don't forget the dot, unless you don't want one.
+    let g:nv_default_extension = '.md'
+" Shortcut
+    nnoremap <silent> <c-a> :NV<CR>
+" String. Controls how new note window is created.
+    let g:nv_create_note_window = 'e'
+" String. Must be in the form 'ctrl-KEY' or 'alt-KEY'
+    let g:nv_create_note_key = 'ctrl-n'
+
+
+""""""""""""""""""""""""""""""
 " => CtrlP plugin
 """"""""""""""""""""""""""""""
 " Set mapping and command
@@ -722,7 +740,7 @@ end
     set completeopt=menuone,longest,preview
 
 " Make sure the current directory is in the python path (for omni-completion)
-python << EOF
+py3 << EOF
 import sys
 import os
 sys.path.append(os.getcwd())
