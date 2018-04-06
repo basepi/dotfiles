@@ -65,6 +65,9 @@
         " Buffer management
         Plug 'vim-scripts/bufexplorer.zip'
 
+        " Rename file support
+        Plug 'vim-scripts/Rename2'
+
         " Search
         "Plug 'haya14busa/incsearch-easymotion.vim'
         Plug 'haya14busa/incsearch-fuzzy.vim'
@@ -88,6 +91,7 @@
         Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
         Plug 'saltstack/salt-vim', { 'for': 'sls' }
         Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+        Plug 'basepi/follow-markdown-links', { 'for': 'markdown' }
 
         " Repeat plugin operations with .
         Plug 'tpope/vim-repeat'
