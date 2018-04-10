@@ -61,6 +61,7 @@
         " Project navigation
         Plug 'kien/ctrlp.vim'
         Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind'] }
+        Plug 'basepi/netrw'
 
         " Buffer management
         Plug 'vim-scripts/bufexplorer.zip'
@@ -269,7 +270,7 @@
 "    set equalalways
 
 " When windows are split, new window appears on bottom
-    set splitbelow
+    "set splitbelow " disabled due to bug in netrw
 " When windows are vsplit, new window appears on right
     set splitright
 
@@ -536,6 +537,26 @@ end
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => netrw
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Shortcut for refresh
+    augroup netrw_mapping
+        autocmd!
+        autocmd filetype netrw call NetrwMapping()
+    augroup END
+
+    function! NetrwMapping()
+        noremap <buffer> <c-r> <c-l>
+    endfunction
+
+" Preview
+    let g:netrw_liststyle=0         " thin (change to 3 for tree)
+    let g:netrw_altv=1              " open files on right
+    let g:netrw_preview=1
+    let g:netrw_winsize=30
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcut for the date/time
@@ -699,7 +720,10 @@ end
 " String. Controls how new note window is created.
     let g:nv_create_note_window = 'e'
 " String. Must be in the form 'ctrl-KEY' or 'alt-KEY'
-    let g:nv_create_note_key = 'ctrl-n'
+    let g:nv_create_note_key = 'ctrl-x'
+" Boolean. If set, will truncate each path element to a single character. If
+" you have colons in your pathname, this will fail. Not set by default.
+    let g:nv_use_short_pathnames = 0
 
 
 """"""""""""""""""""""""""""""
