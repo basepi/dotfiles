@@ -711,7 +711,7 @@ end
 " => notational-fzf
 """"""""""""""""""""""""""""""
 " Search Path
-    let g:nv_search_paths = ['~/Dropbox/Notes']
+    let g:nv_search_paths = ['./']
 " String. Set to '' (the empty string) if you don't want an extension appended by default.
 " Don't forget the dot, unless you don't want one.
     let g:nv_default_extension = '.md'
