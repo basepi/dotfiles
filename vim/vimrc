@@ -372,6 +372,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
     syntax on
+    set synmaxcol=300
+
+" Set timeout for matching parens
+    let g:matchparen_insert_timeout=5
 
 " Define custom extension(s) for syntax highlighting
     au BufNewFile,BufRead *.md set filetype=markdown
@@ -535,6 +539,9 @@ end
     nnoremap <leader>N :cp<cr>
     nnoremap <leader>p :cp<cr>
 
+" Bind <leader>y to forward last-yanked text to Clipper
+    nnoremap <leader>y :call system('nc -N localhost 8377', @0)<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
@@ -634,7 +641,7 @@ end
 " => vim-gitgutter plugin
 """"""""""""""""""""""""""""""
 " Turn on gutter by default
-    set signcolumn=yes
+    "set signcolumn=yes
 
 
 """"""""""""""""""""""""""""""
@@ -650,10 +657,11 @@ end
     let g:syntastic_style_warning_symbol = 'S'
     let g:syntastic_always_populate_loc_list = 1
     let g:syntastic_auto_loc_list = 0
-    nmap <silent> <leader>y :SyntasticCheck<cr>
+    nmap <silent> <leader>i :SyntasticCheck<cr>
 
     let g:syntastic_python_checkers = ['python']
     let g:syntastic_tex_checkers = []
+    let g:syntastic_rst_checkers = ['sphinx']
 
     set statusline+=\ %#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
