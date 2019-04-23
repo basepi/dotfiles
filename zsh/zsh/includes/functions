@@ -40,22 +40,22 @@ function extract() {
 }
 
 function sssh() {
-    ssh cmyers@$1@scb.dmz.ut1.adobe.net
+    ssh cmyers@$1@scb.ut1.adobe.com
 }
 function s() {
-    ssh cmyers@$1@scb.dmz.ut1.adobe.net
+    ssh cmyers@$1@scb.ut1.adobe.com
 }
 
 function scbscp() {
-    sscp -S /Users/cmyers/src/work/scpagent.pl $1 cmyers@$2@scb.dmz.ut1.adobe.net:$3
+    sscp -S /Users/cmyers/src/work/scpagent.pl $1 cmyers@$2@scb.ut1.adobe.com:$3
 }
 
 function dev() {
-    ssh cmyers@cstdev01.dmz.ut1@scb.dmz.ut1.adobe.net
+    ssh cmyers@cstdev01.dmz.ut1@scb.ut1.adobe.com
 }
 
 function mom() {
-    ssh cmyers@cst1.dmz.ut1@scb.dmz.ut1.adobe.net
+    ssh cmyers@cst1.or1@scb.ut1.adobe.com
 }
 
 function vpndown() {
