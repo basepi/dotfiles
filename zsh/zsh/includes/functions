@@ -39,23 +39,12 @@ function extract() {
   fi
 }
 
-function sssh() {
-    ssh cmyers@$1@scb.dmz.ut1.adobe.net
-}
 function s() {
-    ssh cmyers@$1@scb.dmz.ut1.adobe.net
+    ssh -i ~/.ssh/dx_id_rsa cmyers@$1@scb.dmz.ut1.adobe.net
 }
 
 function scbscp() {
-    sscp -S /Users/cmyers/src/work/scpagent.pl $1 cmyers@$2@scb.dmz.ut1.adobe.net:$3
-}
-
-function dev() {
-    ssh cmyers@cstdev01.dmz.ut1@scb.dmz.ut1.adobe.net
-}
-
-function mom() {
-    ssh cmyers@cst1.dmz.ut1@scb.dmz.ut1.adobe.net
+    sscp -i ~/.ssh/dx_id_rsa -S /Users/cmyers/src/work/scpagent.pl $1 cmyers@$2@scb.dmz.ut1.adobe.net:$3
 }
 
 function vpndown() {
