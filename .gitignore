@@ -10,6 +10,7 @@ misc/config/keybase
 misc/config/autostart
 misc/config/StardewValley
 misc/config/configstore
+misc/config/karabiner/automatic_backups
 iterm2/iterm2/it2*
 iterm2/iterm2/imgcat
 iterm2/iterm2/imgls
