@@ -1,0 +1,21 @@
+" Do semantic joins when possible
+    set ideajoin
+
+" Searching
+    " Ignore case when searching
+    set ignorecase
+    " If search contains capital letter(s), case-sensitive search
+    set smartcase
+    " Enable search highlighting (disable by using "set nohl")
+    set hlsearch
+    " Search as you type (instant)
+    set incsearch
+
+" Set 2 line scroll-offset
+    set scrolloff=2
+
+" Smart way to move between windows
+    nnoremap <C-j> <C-W>j
+    nnoremap <C-k> <C-W>k
+    nnoremap <C-h> <C-W>h
+    nnoremap <C-l> <C-W>l
