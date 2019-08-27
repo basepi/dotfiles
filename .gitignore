@@ -4,6 +4,7 @@ vim/vim/view
 vim/vim/plugged
 vim/vim/autoload
 vim/vim/.netrwhist
+vim/vim/black
 weechat/weechat/logs
 weechat/weechat/*.log
 misc/config/keybase

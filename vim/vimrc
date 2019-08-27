@@ -87,6 +87,8 @@
         Plug 'fs111/pydoc.vim', { 'for': 'python' }
         Plug 'jmcantrell/vim-virtualenv', { 'for': 'python' }
         Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+        Plug 'psf/black', { 'for': 'python' }
+        Plug 'fisadev/vim-isort', { 'for': 'python' }
 
         " Other filetype stuff
         Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
@@ -642,6 +644,12 @@ end
 """"""""""""""""""""""""""""""
 " Turn on gutter by default
     "set signcolumn=yes
+
+
+""""""""""""""""""""""""""""""
+" => Syntastic plugin
+""""""""""""""""""""""""""""""
+    let g:black_linelength = 120
 
 
 """"""""""""""""""""""""""""""
