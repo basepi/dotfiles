@@ -14,6 +14,8 @@ alias sl='gls --color=always -h' # In case of screw-ups (which pretty well descr
 
 alias sed='gsed'
 
+alias tar='gtar'
+
 # Set dircolors for ls
 source <(gdircolors -b $ZSH/other/dircolors)
 
