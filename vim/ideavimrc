@@ -1,3 +1,15 @@
+" <leader> keys must be defined before any commands which use them
+" Map <leader> key
+    let mapleader = ","
+    let g:mapleader = ","
+
+" Map <localleader> key
+    let maplocalleader = ","
+    let g:maplocalleader = ","
+
+" Map <leader><cr> to no highlight (clear highlight after search)
+    nnoremap <silent> <leader><cr> :noh<cr>
+
 " Do semantic joins when possible
     set ideajoin
 
