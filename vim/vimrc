@@ -126,6 +126,9 @@
         " Move between vim/tmux splits seamlessly
         Plug 'christoomey/vim-tmux-navigator'
 
+        " editorconfig.org
+        Plug 'editorconfig/editorconfig-vim'
+
     call plug#end()
 
 
