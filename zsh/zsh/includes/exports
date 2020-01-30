@@ -42,3 +42,6 @@ export GEM_HOME='/usr/local/Cellar/gems/1.9'
 
 # Vagrant
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+
+# Pip
+export PIP_REQUIRE_VIRTUALENV=true
