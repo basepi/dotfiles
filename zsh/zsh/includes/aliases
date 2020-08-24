@@ -16,7 +16,7 @@ alias ports="sudo lsof -i -P -sTCP:LISTEN"
 alias _='sudo'
 
 # Show history
-alias history='fc -l 1'
+alias history='fc -l'
 
 # List direcory contents
 alias ls="ls --color=always -h"

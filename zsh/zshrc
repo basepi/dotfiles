@@ -37,3 +37,10 @@ fi
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+if command -v pyenv-virtualenv-init 1>/dev/null 2>&1; then
+  eval "$(pyenv virtualenv-init -)"
+fi
