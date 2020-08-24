@@ -653,6 +653,7 @@ end
 " => Syntastic plugin
 """"""""""""""""""""""""""""""
     let g:black_linelength = 120
+    let g:black_virtualenv="~/.vim_black"
 
 
 """"""""""""""""""""""""""""""
