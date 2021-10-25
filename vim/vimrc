@@ -61,7 +61,6 @@
         " Project navigation
         Plug 'kien/ctrlp.vim'
         Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind'] }
-        Plug 'basepi/netrw'
 
         " Buffer management
         Plug 'vim-scripts/bufexplorer.zip'
@@ -73,7 +72,8 @@
         "Plug 'haya14busa/incsearch-easymotion.vim'
         Plug 'haya14busa/incsearch-fuzzy.vim'
         Plug 'haya14busa/incsearch.vim'
-        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+        Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+        Plug 'junegunn/fzf.vim'
         Plug 'Alok/notational-fzf-vim'
 
         " Git
@@ -549,26 +549,6 @@ end
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => netrw
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Shortcut for refresh
-    augroup netrw_mapping
-        autocmd!
-        autocmd filetype netrw call NetrwMapping()
-    augroup END
-
-    function! NetrwMapping()
-        noremap <buffer> <c-r> <c-l>
-    endfunction
-
-" Preview
-    let g:netrw_liststyle=0         " thin (change to 3 for tree)
-    let g:netrw_altv=1              " open files on right
-    let g:netrw_preview=1
-    let g:netrw_winsize=30
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcut for the date/time
@@ -744,6 +724,15 @@ end
 " Boolean. If set, will truncate each path element to a single character. If
 " you have colons in your pathname, this will fail. Not set by default.
     let g:nv_use_short_pathnames = 0
+
+
+""""""""""""""""""""""""""""""
+" => fzf.vim
+""""""""""""""""""""""""""""""
+" Search git files
+    nnoremap <leader>g :GFiles<CR>
+" Search all files
+    nnoremap <leader><s-f> :Files<CR>
 
 
 """"""""""""""""""""""""""""""
