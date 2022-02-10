@@ -12,7 +12,9 @@ misc/config/autostart
 misc/config/StardewValley
 misc/config/configstore
 misc/config/karabiner/automatic_backups
+misc/config/gh/hosts.yml
 iterm2/iterm2/it2*
 iterm2/iterm2/imgcat
 iterm2/iterm2/imgls
 tmux/tmux
+
