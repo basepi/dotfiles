@@ -15,7 +15,7 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     ctags = !.git/hooks/ctags
 [push]
-    default = matching
+	default = current
 [core]
     excludesfile = ~/.gitexcludes
     editor = vim
@@ -33,5 +33,8 @@
     keepBackup = false
 [init]
     templatedir = ~/.git_template
+	defaultBranch = main
 [commit]
 	gpgsign = true
+[pull]
+	ff = only

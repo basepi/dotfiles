@@ -153,3 +153,7 @@ bugfixes
 YAML
 Facebook
 SaltStack
+W3C
+traceparent
+tracestate
+UUID
