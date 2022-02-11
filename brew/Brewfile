@@ -26,7 +26,6 @@ brew "postgresql"
 brew "pre-commit"
 brew "pyenv"
 brew "pyenv-virtualenv"
-brew "python@2", link: false
 brew "redis"
 brew "ripgrep"
 brew "serverless"
