@@ -421,6 +421,10 @@
 " When you press gv you vimgrep after the selected text
     vnoremap <silent> gv :call VisualSearch('gv')<CR>
 
+" Creates a markdown link for selected text with the contents of the clipboard
+" as the URL
+    xnoremap <leader>l <Esc>`>a](<C-r>*)<C-o>`<[<Esc>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
