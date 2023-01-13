@@ -972,6 +972,10 @@
 	<false/>
 	<key>NeverWarnAboutShortLivedSessions_D5597C5C-3694-4472-BA6A-99BCA364111B</key>
 	<true/>
+	<key>NeverWarnAboutShortLivedSessions_FDC9DB43-9C27-4418-BCAD-E9D047F18825</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_FDC9DB43-9C27-4418-BCAD-E9D047F18825_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
