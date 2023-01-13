@@ -1,7 +1,21 @@
 # Prompt
 
+autoload -U colors && colors
+
+local d="%F{blue}"
+local open="%F{blue}[%f"
+local close="%F{blue}]%f"
+local at="%F{blue}@%f"
+local name="%F{red}%n%f"
+local host="%F{yellow}%m%f"
+local tstamp="%F{cyan}%*%f"
+
+ZSH_VIM_PROMPT="${open}%F{green}NORMAL%f${close}"
+
 function collapse_pwd {
-    echo $(pwd | sed -e "s,^$HOME,~,")
+    echo -n "%F{green}"
+    echo -n $(pwd | sed -e "s,^$HOME,~,")
+    echo -n "%f"
 }
 
 function prompt_char {
@@ -18,37 +32,21 @@ function virtualenv_info () {
   if [[ "$PYENV_VERSION" == "system" ]] ; then
       echo ""
   elif [[ "$PYENV_VENV" == "$PYENV_VERSION" ]] ; then
-      echo "[${PYENV_VERSION}] "
+      echo "${open}%F{magenta}${PYENV_VERSION}%f${close} "
   else
-      echo "[${PYENV_SHORT}/${PYENV_VENV}] "
+      echo "${open}%F{magenta}${PYENV_SHORT}/${PYENV_VENV}%f${close} "
   fi
 }
 
-
-local d="%{$FX[reset]$FG[025]%}"
-local name="%{$FX[reset]$FG[133]%}%n"
-local host="%{$FX[reset]$FG[136]%}%m"
-local green="%{$FX[reset]$FG[070]%}"
-local white="%{$FG[012]%}"
-local tstamp="%{$FG[037]%}%*"
-
-ZSH_GIT_PROMPT_PREFIX=" [%{$FX[reset]$FG[133]%}"
-ZSH_GIT_PROMPT_SUFFIX="%{$FX[reset]$FG[025]%}]"
-ZSH_GIT_PROMPT_DIRTY="%{$FX[reset]$FG[070]%}?"
-ZSH_GIT_PROMPT_UNTRACKED="%{$FX[reset]$FG[070]%}?"
-ZSH_GIT_PROMPT_CLEAN=""
-
-ZSH_VIM_PROMPT=" ${d}[${green}NORMAL${d}]"
-
 # Set it initially
 PROMPT='
-${d}[${name}${d}@${host}${d}] [${green}$(collapse_pwd)${d}]$(git_prompt_info) ${${KEYMAP/vicmd/$ZSH_VIM_PROMPT}/(main|viins)/}
-${d}$(virtualenv_info)$(prompt_char) ${white}'
+${open}${name}${at}${host}${close} ${open}$(collapse_pwd)${close}$(git_prompt_info) ${${KEYMAP/vicmd/$ZSH_VIM_PROMPT}/(main|viins)/}
+$(virtualenv_info)%F{blue}$(prompt_char)%f '
 
 function zle-line-init zle-keymap-select {
     PROMPT='
-${d}[${tstamp}${d}] [${name}${d}@${host}${d}] [${green}$(collapse_pwd)${d}]$(git_prompt_info) ${${KEYMAP/vicmd/$ZSH_VIM_PROMPT}/(main|viins)/}
-${d}$(virtualenv_info)$(prompt_char) ${white}'
+${open}${tstamp}${close} ${open}${name}${at}${host}${close} ${open}$(collapse_pwd)${close}$(git_prompt_info) ${${KEYMAP/vicmd/$ZSH_VIM_PROMPT}/(main|viins)/}
+$(virtualenv_info)%F{blue}$(prompt_char)%f '
     zle reset-prompt
 }
 

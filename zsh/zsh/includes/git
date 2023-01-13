@@ -1,5 +1,12 @@
 # Git
 
+local open="%F{blue}[%f"
+local close="%F{blue}]%f"
+ZSH_GIT_PROMPT_DIRTY="%F{green}?%f"
+ZSH_GIT_PROMPT_UNTRACKED="%F{green}?%f"
+ZSH_GIT_PROMPT_CLEAN=""
+
+
 ##### Helper functions (for prompt, etc) #####
 
 # Will return the current branch name
@@ -12,7 +19,7 @@ function current_branch() {
 # Get the name of the branch we are on
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_GIT_PROMPT_SUFFIX"
+  echo " ${open}%F{red}${ref#refs/heads/}$(parse_git_dirty)%f${close}"
 }
 
 # Get the 'dirty' state of the git repo
