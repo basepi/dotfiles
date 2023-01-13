@@ -19,6 +19,7 @@
 [core]
     excludesfile = ~/.gitexcludes
     editor = vim
+	pager = less -FRX
 [merge]
     tool = diffconflicts
 [difftool "sourcetree"]
