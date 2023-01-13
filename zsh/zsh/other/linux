@@ -1,5 +1,0 @@
-# Linux
-
-# Set dircolors for ls
-source <(dircolors -b $ZSH/other/dircolors)
-

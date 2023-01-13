@@ -1,6 +1,0 @@
-case $( uname -s ) in
-    Darwin )
-        source $ZSH/other/mac ;;
-    Linux )
-        source $ZSH/other/linux ;;
-esac
