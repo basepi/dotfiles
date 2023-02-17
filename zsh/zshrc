@@ -72,6 +72,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.zsh-custom
 
+# PATH (yes, it's messy)
+export PATH=/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/include:/usr/local/lib:/usr/bin:/usr/include:/usr/lib:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+
+# pyenv
+eval "$(pyenv init --path)"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -112,12 +118,6 @@ export LANG=en_US.UTF-8
 export EDITOR=vim
 export VISUAL=vim
 export SVN_EDITOR=vim
-
-# PATH (yes, it's messy)
-export PATH=/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/include:/usr/local/lib:/usr/bin:/usr/include:/usr/lib:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
-
-# pyenv
-eval "$(pyenv init --path)"
 
 # GREP
 export GREP_COLOR='1;32'
