@@ -1,0 +1,49 @@
+# Allow gmail/fastmail/github binds
+unbindurl mail.google.com --mode=normal j
+unbindurl mail.google.com --mode=normal k
+unbindurl mail.google.com --mode=normal x
+unbindurl mail.google.com --mode=normal o
+unbindurl mail.google.com --mode=normal u
+unbindurl mail.google.com --mode=normal yc
+unbindurl mail.google.com --mode=normal ym
+unbindurl mail.google.com --mode=normal yo
+unbindurl mail.google.com --mode=normal ys
+unbindurl mail.google.com --mode=normal yt
+unbindurl mail.google.com --mode=normal yy
+unbindurl mail.google.com --mode=normal ]]
+unbindurl mail.google.com --mode=normal ]c
+seturl mail.google.com leavegithubalone true
+unbindurl fastmail.com --mode=normal j
+unbindurl fastmail.com --mode=normal k
+unbindurl fastmail.com --mode=normal x
+unbindurl fastmail.com --mode=normal o
+unbindurl fastmail.com --mode=normal u
+unbindurl fastmail.com --mode=normal yc
+unbindurl fastmail.com --mode=normal ym
+unbindurl fastmail.com --mode=normal yo
+unbindurl fastmail.com --mode=normal ys
+unbindurl fastmail.com --mode=normal yt
+unbindurl fastmail.com --mode=normal yy
+unbindurl fastmail.com --mode=normal ]]
+unbindurl fastmail.com --mode=normal ]c
+unbindurl fastmail.com --mode=normal a
+seturl fastmail.com leavegithubalone true
+unbindurl github.com --mode=normal j
+unbindurl github.com --mode=normal k
+unbindurl github.com --mode=normal x
+unbindurl github.com --mode=normal o
+unbindurl github.com --mode=normal u
+seturl github.com leavegithubalone true
+
+# Switch direction of tab nav
+bind J tabnext
+bind K tabprev
+
+# Quickmarks
+quickmark r https://www.reddit.com/r/ADHD/ https://www.reddit.com/r/exmormon/
+quickmark n https://github.com/notifications
+quickmark p https://github.com/elastic/apm-agent-python
+quickmark m https://app.fastmail.com/mail/ https://mail.google.com/mail/u/1/#inbox
+
+# Don't close treestyle tabs with <C-,>
+set escapehatchsidebarhack false
