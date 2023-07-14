@@ -4349,6 +4349,8 @@
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
 				<real>0.83529411764705885</real>
 				<key>Color Space</key>
@@ -5148,7 +5150,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
