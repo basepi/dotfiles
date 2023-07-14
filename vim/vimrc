@@ -81,6 +81,7 @@
         " Git
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-git'
+        Plug 'tpope/vim-unimpaired'
         Plug 'airblade/vim-gitgutter'
 
         " Python
