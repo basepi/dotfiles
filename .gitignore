@@ -9,6 +9,7 @@ weechat/weechat/logs
 weechat/weechat/*.log
 misc/config/keybase
 misc/config/grammarly*
+misc/config/Battle.net
 misc/config/raycast
 misc/config/autostart
 misc/config/StardewValley
