@@ -73,18 +73,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_CUSTOM=$HOME/.zsh-custom
 
 # PATH (yes, it's messy)
-export PATH=/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/include:/usr/local/lib:/usr/bin:/usr/include:/usr/lib:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/include:/usr/local/lib:/usr/bin:/usr/include:/usr/lib:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 
-# pyenv
-eval "$(pyenv init --path)"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export NVM_LAZY_LOAD=true
-plugins=(git fzf vi-mode pyenv zsh-nvm)
+plugins=(git fzf vi-mode zsh-autosuggestions zsh-prompt-benchmark)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -251,3 +248,14 @@ unsetopt SHARE_HISTORY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/basepi/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/basepi/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/basepi/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/basepi/google-cloud-sdk/completion.zsh.inc'; fi
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
