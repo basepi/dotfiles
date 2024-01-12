@@ -62,7 +62,7 @@ If you are using a different terminal, proceed with manual font installation. ðŸ
      *Meslo Nerd Font*.
    - **Blink**: Type `config`, go to *Appearance*, tap *Add a new font*, tap *Open Gallery*, select
      *MesloLGS NF.css*, tap *import* and type `exit` in the home view to reload the font.
-   - **Terminus**: Open *Settings â†’ Appearance* and set *Font* to `MesloLGS NF`.
+   - **Tabby** (formerly **Terminus**): Open *Settings â†’ Appearance* and set *Font* to `MesloLGS NF`.
    - **Terminator**: Open *Preferences* using the context menu. Under *Profiles* select the *General*
      tab (should be selected already), uncheck *Use the system fixed width font* (if not already)
      and select `MesloLGS NF Regular`. Exit the Preferences dialog by clicking *Close*.
@@ -115,6 +115,15 @@ If you are using a different terminal, proceed with manual font installation. ðŸ
      ```
      After changing the config run `xrdb ~/.Xresources` to reload it. The new config is applied to
      all new terminals.
+   - **Zed**: Open `~/.config/zed/settings.json` and set `terminal.font_family` to `"MesloLGS NF"`.
+     ```jsonc
+     {
+       "terminal": {
+         "font_family": "MesloLGS NF"
+       },
+       // Other settings.
+     }
+     ```
    - Crostini (Linux on Chrome OS): Open
      chrome-untrusted://terminal/html/nassh_preferences_editor.html, set *Text font family* to
       `'MesloLGS NF'` (including the quotes) and *Custom CSS (inline text)* to the following:
