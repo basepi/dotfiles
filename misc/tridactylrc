@@ -4,6 +4,8 @@ unbindurl mail.google.com --mode=normal k
 unbindurl mail.google.com --mode=normal x
 unbindurl mail.google.com --mode=normal o
 unbindurl mail.google.com --mode=normal u
+unbindurl mail.google.com --mode=normal U
+unbindurl mail.google.com --mode=normal a
 unbindurl mail.google.com --mode=normal yc
 unbindurl mail.google.com --mode=normal ym
 unbindurl mail.google.com --mode=normal yo
@@ -18,6 +20,7 @@ unbindurl fastmail.com --mode=normal k
 unbindurl fastmail.com --mode=normal x
 unbindurl fastmail.com --mode=normal o
 unbindurl fastmail.com --mode=normal u
+unbindurl fastmail.com --mode=normal a
 unbindurl fastmail.com --mode=normal yc
 unbindurl fastmail.com --mode=normal ym
 unbindurl fastmail.com --mode=normal yo
@@ -26,7 +29,6 @@ unbindurl fastmail.com --mode=normal yt
 unbindurl fastmail.com --mode=normal yy
 unbindurl fastmail.com --mode=normal ]]
 unbindurl fastmail.com --mode=normal ]c
-unbindurl fastmail.com --mode=normal a
 seturl fastmail.com leavegithubalone true
 unbindurl github.com --mode=normal j
 unbindurl github.com --mode=normal k
@@ -40,10 +42,14 @@ bind J tabnext
 bind K tabprev
 
 # Quickmarks
-quickmark r https://www.reddit.com/r/ADHD/ https://www.reddit.com/r/exmormon/
+quickmark r https://www.reddit.com/r/exmormon/ https://www.reddit.com/r/ADHD/
 quickmark n https://github.com/notifications
 quickmark p https://github.com/elastic/apm-agent-python
 quickmark m https://app.fastmail.com/mail/ https://mail.google.com/mail/u/1/#inbox
+quickmark a https://github.com/notifications https://www.reddit.com/r/PokemonSleep/ https://www.reddit.com/r/Tirzepatide/ https://www.reddit.com/r/exmormon/ https://www.reddit.com/r/ADHD/ https://app.fastmail.com/mail/ https://mail.google.com/mail/u/1/#inbox
 
 # Don't close treestyle tabs with <C-,>
 set escapehatchsidebarhack false
+
+# Don't bind <F1>
+unbind <F1>
