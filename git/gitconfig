@@ -17,7 +17,7 @@
 [push]
 	default = current
 [core]
-    excludesfile = ~/.gitexcludes
+	excludesfile = ~/.gitignore
     editor = vim
 	pager = less -FRX
 [merge]
