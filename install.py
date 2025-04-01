@@ -13,8 +13,6 @@
 # is offered. The user is advised to test the source code thoroughly before
 # relying on it. The user must assume the entire risk of using the source code.
 
-from __future__ import print_function
-
 import os
 import glob
 import shutil
