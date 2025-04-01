@@ -259,3 +259,7 @@ if [ -f '/Users/basepi/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ba
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
