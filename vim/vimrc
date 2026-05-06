@@ -483,6 +483,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Other key bindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Navigate via wrapped lines by default. This solution also allows for better
+" navigation via <num>j and <num>k (keeps vcount working)
+noremap <expr> k (v:count == 0 ? 'gk' : 'k')
+noremap <expr> j (v:count == 0 ? 'gj' : 'j')
+
 " Map visual-mode spacebar to center screen on cursor
     nnoremap <space> zz
 
@@ -516,7 +521,7 @@
 " Set breakindent for when wrapping is on
 if has('patch-7.4.338')
     set breakindent
-    set showbreak=••••
+    set breakindentopt=shift:2
 end
 
 " Toggle between wrap and no wrap with <leader>w
