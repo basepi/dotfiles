@@ -87,6 +87,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -244,8 +248,6 @@ function extract() {
   fi
 }
 
-unsetopt SHARE_HISTORY
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -263,3 +265,22 @@ eval "$(pyenv init -)"
 # zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# Python certs
+CERT_PATH=$(python -m certifi)
+export SSL_CERT_FILE=${CERT_PATH}
+export REQUESTS_CA_BUNDLE=${CERT_PATH}
+
+# Added by Windsurf
+export PATH="/Users/basepi/.codeium/windsurf/bin:$PATH"
+
+# Created by `pipx` on 2025-08-20 22:08:39
+export PATH="$PATH:/Users/basepi/.local/bin"
+
+# Cursor CLI
+export PATH="$PATH:$HOME/.local/bin"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
