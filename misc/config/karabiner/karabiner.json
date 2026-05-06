@@ -50,6 +50,33 @@
                     }
                 ]
             },
+            "devices": [
+                {
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        }
+                    ]
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 6519,
+                        "vendor_id": 12951
+                    }
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 666,
+                        "vendor_id": 1452
+                    },
+                    "treat_as_built_in_keyboard": true
+                }
+            ],
             "fn_function_keys": [
                 {
                     "from": { "key_code": "f1" },
