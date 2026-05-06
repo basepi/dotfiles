@@ -17,6 +17,7 @@ misc/config/configstore
 misc/config/karabiner/automatic_backups
 misc/config/gh/hosts.yml
 misc/config/gcloud
+misc/config/toggl-skill
 iterm2/iterm2/it2*
 iterm2/iterm2/imgcat
 iterm2/iterm2/imgls
