@@ -20,6 +20,8 @@ misc/config/gcloud
 misc/config/toggl-skill
 misc/config/cagent
 misc/config/uv
+misc/config/ai-hooks
+misc/config/amp
 iterm2/iterm2/it2*
 iterm2/iterm2/imgcat
 iterm2/iterm2/imgls

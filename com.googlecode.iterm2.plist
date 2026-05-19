@@ -3682,6 +3682,10 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Timestamps Style</key>
+			<integer>2</integer>
+			<key>Timestamps Visible</key>
+			<true/>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
