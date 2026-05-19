@@ -74,6 +74,7 @@ ZSH_CUSTOM=$HOME/.zsh-custom
 
 # PATH (yes, it's messy)
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/include:/usr/local/lib:/usr/bin:/usr/include:/usr/lib:/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+export PATH="$PATH:$HOME/.local/bin"
 
 
 # Which plugins would you like to load?
@@ -91,11 +92,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
 # Exports
 
 # General
@@ -112,8 +108,6 @@ export CLICOLOR='Yes'
 
 # Unicode support
 export LANG=en_US.UTF-8
-# ASCII version
-#export LANG=C
 
 # Editor settings
 export EDITOR=vim
@@ -130,21 +124,13 @@ export LC_CTYPE=en_US.UTF-8
 # Pip
 export PIP_REQUIRE_VIRTUALENV=true
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # Aliases
 
 # Sudo
 alias svim='sudo vim'
 alias stail="sudo tail"
 
-# Package managers
-alias apt-get='sudo apt-get'
-alias aptitude='sudo aptitude'
-
 # Misc
-alias rapache="sudo /etc/init.d/apache2 reload"
 alias ports="sudo lsof -i -P -sTCP:LISTEN"
 
 # Super user
@@ -170,14 +156,7 @@ alias vi="vim"
 # https://twitter.com/liamosaur/status/506975850596536320
 alias fuck='sudo $(fc -ln -1)'
 
-# LXC Parasite host management
-alias lxcup='VBoxManage startvm "LXC Host" --type headless'
-alias lxcdown='VBoxManage controlvm "LXC Host" poweroff'
-
-alias mustafar='mosh basepi@mustafar.basepi.net -- /home/linuxbrew/.linuxbrew/bin/tmux new-session -A -D -s base'
-alias smustafar='ssh basepi@mustafar.basepi.net -t -- /home/linuxbrew/.linuxbrew/bin/tmux new-session -A -D -s base'
-
-alias ttt='/home/linuxbrew/.linuxbrew/bin/tmux new-session -A -D -s base'
+alias ttt='tmux new-session -A -D -s base'
 
 alias sa='ssh-add --apple-use-keychain --apple-load-keychain'
 
@@ -270,17 +249,3 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 CERT_PATH=$(python -m certifi)
 export SSL_CERT_FILE=${CERT_PATH}
 export REQUESTS_CA_BUNDLE=${CERT_PATH}
-
-# Added by Windsurf
-export PATH="/Users/basepi/.codeium/windsurf/bin:$PATH"
-
-# Created by `pipx` on 2025-08-20 22:08:39
-export PATH="$PATH:/Users/basepi/.local/bin"
-
-# Cursor CLI
-export PATH="$PATH:$HOME/.local/bin"
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
