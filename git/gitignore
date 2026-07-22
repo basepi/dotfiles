@@ -2,3 +2,5 @@
 .python-version
 .scratch/
 .DS_STORE
+
+**/.claude/settings.local.json
