@@ -513,8 +513,8 @@ hi InactiveWindow guibg=#eee8d5
 augroup WindowManagement
   autocmd!
   autocmd VimEnter,WinEnter * call Handle_Win_Enter()
-  autocmd FocusLost * hi ActiveWindow guibg=#eee8d5
-  autocmd FocusGained * hi ActiveWindow guibg=#fdf6e3
+  autocmd FocusLost * hi ActiveWindow guibg=#eee8d5 | hi Normal guibg=#eee8d5
+  autocmd FocusGained * hi ActiveWindow guibg=#fdf6e3 | hi Normal guibg=#fdf6e3
 augroup END
 
 " Change highlight group of active/inactive windows
