@@ -18,10 +18,7 @@ import glob
 import shutil
 import sys
 
-try:
-    input = raw_input
-except NameError:
-    pass
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
 def installdotfiles(noprompt=False):
@@ -37,7 +34,7 @@ def installdotfiles(noprompt=False):
         response = input('\nWill install via symlinks in `~/`, continue? (y/n) ')
         if response.lower() != 'y':
             print('Aborting...')
-            exit(1)
+            sys.exit(1)
 
     # Ask user to install all or pick and choose
     possibilities = glob.glob('*')

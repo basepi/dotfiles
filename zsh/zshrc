@@ -127,11 +127,17 @@ export PIP_REQUIRE_VIRTUALENV=true
 # Aliases
 
 # Sudo
-alias svim='sudo vim'
+alias svim='sudo nvim'
 alias stail="sudo tail"
+
+# tmux
+alias tmux-reload='tmux source-file ~/.tmux.conf'
 
 # Misc
 alias ports="sudo lsof -i -P -sTCP:LISTEN"
+
+# Print all the colors
+alias colors='for i in {0..255}; do printf "\e[38;5;${i}m%3d \e[0m" $i; [ $(( (i+1) % 16 )) -eq 0 ] && echo; done'
 
 # Super user
 alias _='sudo'
@@ -151,12 +157,16 @@ alias sl='ls -h --color=always' # In case of screw-ups
 alias grep='grep --color=auto'
 
 # Sometimes I work on vi-only systems -- this keeps me sane on the switch
-alias vi="vim"
+alias vi="nvim"
+alias vim="nvim"
 
 # https://twitter.com/liamosaur/status/506975850596536320
 alias fuck='sudo $(fc -ln -1)'
 
 alias ttt='tmux new-session -A -D -s base'
+
+# Don't try to rename the session/tab
+#export DISABLE_AUTO_TITLE=true
 
 alias sa='ssh-add --apple-use-keychain --apple-load-keychain'
 
@@ -183,6 +193,7 @@ if [[ `uname` == "Darwin" ]]; then
     alias tar='gtar'
 fi
 
+export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 if type "keychain" > /dev/null; then
@@ -246,6 +257,15 @@ bindkey '^ ' autosuggest-accept
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Python certs
-CERT_PATH=$(python -m certifi)
-export SSL_CERT_FILE=${CERT_PATH}
-export REQUESTS_CA_BUNDLE=${CERT_PATH}
+# Guarded: if `python -m certifi` fails or certifi isn't installed for whatever `python`
+# currently resolves to (e.g. after a pyenv global switch), don't export an empty/missing
+# path -- that overrides Python's own trust-store fallback and breaks TLS verification for
+# every Python process in the shell, silently and confusingly.
+CERT_PATH=$(python -m certifi 2>/dev/null)
+if [[ -n "$CERT_PATH" && -f "$CERT_PATH" ]]; then
+  export SSL_CERT_FILE="$CERT_PATH"
+  export REQUESTS_CA_BUNDLE="$CERT_PATH"
+else
+  unset SSL_CERT_FILE REQUESTS_CA_BUNDLE
+fi
+unset CERT_PATH
