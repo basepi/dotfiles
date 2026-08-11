@@ -1,0 +1,87 @@
+{
+  "title": "Kensington mouse button chords",
+  "rules": [
+    {
+      "description": "button1 + button2 -> button3 (middle click)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "pointing_button": "button1"
+              },
+              {
+                "pointing_button": "button2"
+              }
+            ],
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button3"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1149
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "button1 + button4 -> cmd-ctrl-opt-shift-a",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "pointing_button": "button1"
+              },
+              {
+                "pointing_button": "button4"
+              }
+            ],
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1149
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

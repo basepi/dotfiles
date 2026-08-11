@@ -5,6 +5,70 @@
                 "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
                 "rules": [
                     {
+                        "description": "Hold left_command + move trackball to scroll",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": ["left_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "options": { "speed_multiplier": 2 },
+                                "type": "mouse_motion_to_scroll"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "button1 + button4 -> cmd-ctrl-opt-shift-a",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 1149 }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "pointing_button": "button1" },
+                                        { "pointing_button": "button4" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "a",
+                                        "modifiers": ["left_command", "left_control", "left_option", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "button1 + button2 -> button3 (middle click)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 1149 }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "pointing_button": "button1" },
+                                        { "pointing_button": "button2" }
+                                    ]
+                                },
+                                "to": [{ "pointing_button": "button3" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
                             {
                                 "description": "Change f19 to command+control+option+shift. Escape if no other key used.",
@@ -75,6 +139,27 @@
                         "vendor_id": 1452
                     },
                     "treat_as_built_in_keyboard": true
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 32980,
+                        "vendor_id": 1149
+                    },
+                    "ignore": false,
+                    "ignore_vendor_events": true,
+                    "mouse_flip_vertical_wheel": true,
+                    "pointing_motion_xy_multiplier": 2.0,
+                    "simple_modifications": [
+                        {
+                            "from": { "pointing_button": "button3" },
+                            "to": [{ "pointing_button": "button4" }]
+                        },
+                        {
+                            "from": { "pointing_button": "button4" },
+                            "to": [{ "pointing_button": "button5" }]
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
