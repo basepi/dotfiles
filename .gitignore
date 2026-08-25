@@ -25,6 +25,8 @@ misc/config/uv
 misc/config/ai-hooks
 misc/config/amp
 misc/config/linearmouse
+misc/config/MusicBrainz
+misc/config/qBittorrent
 iterm2/iterm2/it2*
 iterm2/iterm2/imgcat
 iterm2/iterm2/imgls

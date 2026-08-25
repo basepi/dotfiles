@@ -271,3 +271,10 @@ else
   unset SSL_CERT_FILE REQUESTS_CA_BUNDLE
 fi
 unset CERT_PATH
+
+# Update my docker containers and recreate
+docker-update() {
+  cd /Volumes/DATA/plex/media/config/docker && \
+  docker compose pull && \
+  docker compose up -d
+}
