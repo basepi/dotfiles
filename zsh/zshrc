@@ -172,6 +172,8 @@ alias sa='ssh-add --apple-use-keychain --apple-load-keychain'
 
 alias glg="git log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
+alias claude="claude --model claude-sonnet-5"
+
 # mkdir & cd to it
 function mcd() {
   mkdir -p "$1" && cd "$1";
