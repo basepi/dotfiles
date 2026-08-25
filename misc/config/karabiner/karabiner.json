@@ -5,16 +5,16 @@
                 "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
                 "rules": [
                     {
-                        "description": "Hold left_command + move trackball to scroll",
+                        "description": "Hold left_alt + move trackball to scroll",
                         "manipulators": [
                             {
                                 "from": {
                                     "modifiers": {
-                                        "mandatory": ["left_command"],
+                                        "mandatory": ["left_alt"],
                                         "optional": ["any"]
                                     }
                                 },
-                                "options": { "speed_multiplier": 2 },
+                                "options": { "speed_multiplier": 4 },
                                 "type": "mouse_motion_to_scroll"
                             }
                         ]
@@ -149,6 +149,7 @@
                     "ignore": false,
                     "ignore_vendor_events": true,
                     "mouse_flip_vertical_wheel": true,
+                    "pointing_motion_wheels_multiplier": 2.0,
                     "pointing_motion_xy_multiplier": 2.0,
                     "simple_modifications": [
                         {

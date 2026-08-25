@@ -3155,6 +3155,8 @@
 			<string></string>
 			<key>AWDS Window Option</key>
 			<string>No</string>
+			<key>Allow Alternate Mouse Scroll</key>
+			<false/>
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
@@ -3338,7 +3340,7 @@
 				<real>0.79607843137254897</real>
 			</dict>
 			<key>Automatically Enable Alternate Mouse Scroll</key>
-			<true/>
+			<false/>
 			<key>Automatically Log</key>
 			<false/>
 			<key>BM Growl</key>
@@ -3542,6 +3544,8 @@
 					<string></string>
 				</dict>
 			</dict>
+			<key>Left Option Key Changeable</key>
+			<false/>
 			<key>Link Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -3563,6 +3567,8 @@
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
+			<key>Movement Keys Scroll Outside Interactive Apps</key>
+			<false/>
 			<key>Name</key>
 			<string>Solarized Light (tmux)</string>
 			<key>Non Ascii Font</key>
@@ -3733,6 +3739,8 @@
 			<true/>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Treat Option as Alt</key>
+			<true/>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>

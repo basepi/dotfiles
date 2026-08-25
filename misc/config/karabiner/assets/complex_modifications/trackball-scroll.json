@@ -2,14 +2,14 @@
   "title": "Trackball scroll on held key",
   "rules": [
     {
-      "description": "Hold left_command + move trackball to scroll",
+      "description": "Hold left_alt + move trackball to scroll",
       "manipulators": [
         {
           "type": "mouse_motion_to_scroll",
           "from": {
             "modifiers": {
               "mandatory": [
-                "left_command"
+                "left_alt"
               ],
               "optional": [
                 "any"
@@ -17,7 +17,7 @@
             }
           },
           "options": {
-            "speed_multiplier": 2
+            "speed_multiplier": 3
           }
         }
       ]
